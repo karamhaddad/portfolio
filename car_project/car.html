@@ -62,6 +62,7 @@
   <link rel="stylesheet" type="text/css" href="../css/nav.css">
   <link rel="stylesheet" href="../seprate-exp.css"> <!-- External CSS file -->
   <link rel="stylesheet" href="../scroll_progress/scroll_progress.css"> <!-- Scroll progress CSS file -->
+  
   <link rel="icon" type="image/x-icon" href="../header/kh_logo.png">
 
   <style>
@@ -129,36 +130,30 @@
 </head>
 
 <body>
-  <!--this is a progress bar for scrolling-->
+  <!-- Progress Bar for Scrolling -->
   <div class="progress-container">
     <div class="progress-bar" id="myBar"></div>
   </div>  
 
   <!-- Navigation -->
   <nav id="nav">
-    <!-- Hamburger Menu Icon for Mobile -->
     <div class="hamburger-icon">
       <a href="../index.html#home">
-        <img src="../header/kh_logo.png" alt="Karam Haddad Logo" class="nav-logo">
+        <img src="../header/kh_logo.png" alt="Karam Haddad Logo" class="nav-logo" loading="lazy">
       </a>
-      <!-- Menu Icon -->
       <div class="menu-icon" onclick="toggleMenu()">
         <span class="line line1"></span>
         <span class="line line2"></span>
       </div>
     </div>
-
-    <!-- Mobile Menu -->
     <div class="mobile-menu hidden">
       <a href="../index.html#home">Home</a>
       <a href="../index.html#experience">Experience</a>
       <a href="../index.html#projects">Projects</a>
       <a href="../index.html#contact">Contact</a>
     </div>
-
-    <!-- Desktop nav menu-->
     <ul class="desktop-menu">
-      <a href="../index.html#home"><li><img src="../header/kh_logo.png" alt="Karam Haddad Logo" class="nav-logo"></li></a>
+      <a href="../index.html#home"><li><img src="../header/kh_logo.png" alt="Karam Haddad Logo" class="nav-logo" loading="lazy"></li></a>
       <a href="../index.html#home"><li>Home</li></a>
       <a href="../index.html#experience"><li>Experience</li></a>
       <a href="../index.html#projects"><li>Projects</li></a>
@@ -172,7 +167,7 @@
       <header class="section-header">
         <h1 class="top-page-title">Object Avoiding Smart Bot</h1>
       </header>
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/DBFbXrDwuZE?si=uPZJULHoCyj1GDKI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/DBFbXrDwuZE?si=uPZJULHoCyj1GDKI" title="YouTube video player" frameborder="0" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
       <div class="project-description">
         <p>
@@ -180,7 +175,7 @@
         </p>
         <h2>Main Parts</h2>
         <!--add image here-->
-        <img class="steps-image" src="../car_project/main_parts.png" alt="Main Parts" />
+        <img class="steps-image" src="../car_project/main_parts.png" alt="Main Parts" loading="lazy">
         <ul>
           <li><strong>Power Supply:</strong> I used a variable and portable DC power supply. MEGO Power Supply.</li>
           <li><strong>Motor Driver:</strong> Controls the direction and speed of the DC motors.</li>
@@ -193,7 +188,7 @@
         <br>
         <h2>Tools Used</h2>
         <!--add image here-->
-        <img class="steps-image" src="../car_project/tools.png" alt="Main Parts" />
+        <img class="steps-image" src="../car_project/tools.png" alt="Tools Used" loading="lazy">
         <ul>
           <li><strong>3D Printer:</strong> To print the chassis.</li>
           <li><strong>Soldering Iron:</strong> For making connections.</li>
@@ -205,21 +200,21 @@
         <h2>Assembly</h2>
         <p class="numbered-list">
           1. <strong>Soldering:</strong> Start by soldering the power and ground wires to the DC motors. The terminal connections can be adjusted later.<br>
-          <img class="steps-image" src="../car_project/solder.png" alt="Main Parts" />
+          <img class="steps-image" src="../car_project/solder.png" alt="Soldering" loading="lazy">
           <br><br>
           2. <strong>Hooking Up:</strong> Connect everything to the motor driver. Test an algorithm to ensure the motors run correctly.<br>
-          <img class="steps-image" src="../car_project/motor_d_test.png" alt="Main Parts" />
+          <img class="steps-image" src="../car_project/motor_d_test.png" alt="Motor Test" loading="lazy">
           <br><br>
           3. <strong>Adding the Sensor:</strong> Attach the ultrasonic sensor to measure distances and stop the motors when obstacles are detected.<br>
-          <img class="steps-image" src="../car_project/sensor.png" alt="Main Parts" />
+          <img class="steps-image" src="../car_project/sensor.png" alt="Sensor" loading="lazy">
           <br><br>
           4. <strong>3D Printing:</strong> Print the chassis and start moving all parts onto it.<br>
           5. <strong>Connecting Components:</strong> Run wires to the motor driver through the chassis hole. Test connections using the mega power supply and alligator clips.<br>
           6. <strong>Breadboard Setup:</strong> Move wire connections to a smaller breadboard for easier handling.<br>
-          <img class="steps-image" src="../car_project/chassis.png" alt="Main Parts" />
+          <img class="steps-image" src="../car_project/chassis.png" alt="Chassis" loading="lazy">
           <br><br>
           7. <strong>Final Touches:</strong> Glue on the rear swivel tire and attach the servo motor. Connect the servo motor to the Raspberry Pi with jumper wires.
-          <img class="steps-image" src="../car_project/servo.png" alt="Main Parts" />
+          <img class="steps-image" src="../car_project/servo.png" alt="Servo Setup" loading="lazy">
         </p>
 
         <br><br>
@@ -240,21 +235,20 @@
         <p class="numbered-list">
           1. <strong>Imports:</strong> Import libraries from the component files.<br>
           2. <strong>Initialization:</strong> Initialize components.<br>
-          <img class="steps-image" src="../car_project/first_code.png" alt="Main Parts" />
+          <img class="steps-image" src="../car_project/first_code.png" alt="Initialization" loading="lazy">
           <br><br>
           3. <strong>Scan Directions Function:</strong> Measure distances straight ahead, left, and right, then save these values.<br>
-          <img class="steps-image" src="../car_project/second_code.png" alt="Main Parts" />
+          <img class="steps-image" src="../car_project/second_code.png" alt="Scan Directions" loading="lazy">
           <br><br>
           4. <strong>Decision Making:</strong> Compare measurements. Prioritize going straight if the path is clear; otherwise, choose the optimal direction (left or right).<br>
-          <img class="steps-image" src="../car_project/third_code.png" alt="Main Parts" />
+          <img class="steps-image" src="../car_project/third_code.png" alt="Decision Making" loading="lazy">
           <br><br>
           5. <strong>Navigate Loop:</strong> Continuously measure forward distance. If below threshold, use the optimal direction function to navigate.
-          <img class="steps-image" src="../car_project/fourth_code.png" alt="Main Parts" />
-
+          <img class="steps-image" src="../car_project/fourth_code.png" alt="Navigate Loop" loading="lazy">
+          <br><br>
           To look at the full detailed code, the Github link is at the end of this post!
         </p>
         <br><br>
-
         <h2>Testing and Future Plans</h2>
         <p>
           After adjustments to the power supply, I was able to add vacuum functionality by attaching a low power vacuum to the chassis. Updates to the blog will come soon to reflect the changes! <br>
@@ -281,6 +275,7 @@
             <span>Return Home</span>
           </a>
         </div>
+
       </div>
     </div>
   </section>
