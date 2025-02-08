@@ -7,26 +7,26 @@
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
   
+  <!-- Tailwind CSS for styling -->
+  <link rel="stylesheet" type="text/css" href="../css/experience.css">
   <link rel="stylesheet" type="text/css" href="../css/style.css">
   <link rel="stylesheet" type="text/css" href="../css/nav.css">
-  <link rel="stylesheet" href="../seprate-exp.css"> <!-- Link to the external CSS file -->
-  <link rel="stylesheet" href="../scroll_progress/scroll_progress.css"> <!-- Link to the scroll progress CSS file -->
+  <link rel="stylesheet" href="../seprate-exp.css"> <!-- External CSS file -->
+  <link rel="stylesheet" href="../scroll_progress/scroll_progress.css"> <!-- Scroll progress CSS file -->
   
   <link rel="icon" type="image/x-icon" href="../header/kh_logo.png">
 
   <style>
-    .banner{
-      /*keep banner styling separate for each project to do whatever pic I want*/
+    /* ---------- Base Styles ---------- */
+    .banner {
       margin: 0;
       padding-top: 100px;
       padding-bottom: 120px;
       width: 100%;
-      background-image: linear-gradient(rgba(0, 0, 0, 0), rgb(16, 16, 16)),
-      url(exxon_banner.JPG);
+      background-image: linear-gradient(rgba(0, 0, 0, 0), rgb(16, 16, 16)), url(exxon_banner.JPG);
       background-size: cover;
       background-position: center;
-
-      color:#d8d5db;
+      color: #d8d5db;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -37,10 +37,10 @@
       font-size: 2.5em;
     }
     ul {
-      padding-left: 25px; /* Adjust to your preference */
+      padding-left: 25px;
     }
     li {
-      margin-bottom: 10px; /* Adds space between list items */
+      margin-bottom: 10px;
     }
     .project-container {
       display: flex;
@@ -73,9 +73,8 @@
       justify-content: center;
       box-shadow: 0 10px 20px rgba(51, 51, 51, 0.2);
       position: relative;
-      margin: 5px; /* Adding margin for spacing between items */
+      margin: 5px;
     }
-
     .skill-here::after {
       content: "";
       position: absolute;
@@ -85,14 +84,12 @@
       height: 5px;
       background: linear-gradient(135deg, #7b4397, #dc2430);
     }
-
     .skills-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); /* Adjust based on the desired column size */
-      gap: 20px; /* Increased the gap between grid items */
+      grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+      gap: 20px;
       justify-items: center;
     }
-
     .top-header {
       display: flex;
       flex-direction: column;
@@ -100,52 +97,136 @@
       align-items: center;
       text-align: center;
     }
-    /*-=-=-=-=-=-=-=CARD STYLING=-=-=-=-=-=-=-=-*/
+    /* ---------- Card Styling ---------- */
     .card {
       width: 220px;
       height: 260px;
       border-radius: 20px;
       padding: 5px;
+      padding-right: 14px;
+      padding-bottom: 14px;
+      margin-right:10px;
       box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
       background-image: linear-gradient(135deg, #7b4397, #dc2430);
       margin-bottom: 10px;
+      flex: 0 0 auto;
+      scroll-snap-align: start;
     }
     .card__content {
       background: rgb(5, 6, 45);
       border-radius: 17px;
       width: 95%;
       height: 96%;
-      padding-left: 10px;
-      padding-top: 10px;
+      padding: 10px;
+      text-align: left;
     }
-    /* Grid styling for the project cards */
+    /* ---------- Grid Styling for Non-Carousel Sections ---------- */
     .card-grid {
       display: grid;
       grid-template-columns: auto auto auto;
       gap: 10px;
     }
+    /* ---------- Carousel Container ---------- */
+    .top-title {
+      z-index: 5; /* so it's above the carousel */
+      margin-bottom: -30px; /* lower it to get to the carousel */
+      color: #F5F5F7;
+      font-family: 'Courier New', monospace;
+    }
+    .experience-container {
+      display: flex;
+      overflow-x: auto;
+      scroll-behavior: smooth;
+      -webkit-overflow-scrolling: touch;
+      scroll-snap-type: x mandatory;
+      padding: 10px;
+      gap: 20px;
+      max-width: 1000px;
+      margin: auto;
+      scrollbar-width: thin;
+      scrollbar-color: #555 #333;
+    }
+    /* ---------- Header & Arrow Buttons ---------- */
+    .header-container {
+      margin: 0 auto;
+      max-width: 1000px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .title-container {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .btns {
+      display: flex;
+      justify-content: flex-end;
+      width: auto;
+    }
+    .pre-btn, .nxt-btn {
+      margin: 5px;
+      padding: 10px;
+      background-color: #333336;
+      border-radius: 20%;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    .pre-btn {
+      transform: rotate(180deg);
+    }
+    .pre-btn img, .nxt-btn img {
+      opacity: 0.2;
+      transition: opacity 0.3s ease-in-out;
+    }
+    .pre-btn:hover img, .nxt-btn:hover img {
+      opacity: 1;
+    }
+    /* ---------- Media Queries ---------- */
     @media (max-width: 768px) {
       .card-grid {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        grid-template-columns: 1fr; /* Adjust to single column for smaller screens */
+        grid-template-columns: 1fr;
       }
-      .card {
-        width: 100%;
-        height: 100%;
+      /* For carousel cards on small screens, maintain a fixed width */
+      .experience-container .card {
+        width: 90%;
+        max-width: 300px;
+        height: auto;
       }
-      .card__content {
-        width: 95.5%;
-        height: 100%;
-        padding:10px;
+      .card{
+        padding-right: 10px;
+        padding-bottom: 17px;
       }
-      .top-page-title {
-        font-size: 2em;
+      .experience-container {
+        gap: 10px;
+        justify-content: flex-start; /* Align to the left */
+        padding-left: 0;
+        scroll-padding-left: 0;
       }
+      /* Hide arrow buttons on small screens */
+      .btns {
+        display: none;
+      }
+      /* Center headings and reduce font sizes */
+      .header-container,
+      .title-container,
       h2 {
+        text-align: center;
         font-size: 2em;
+      }
+      /* Adjust top-title text specifically on small screens */
+      .top-title {
+        font-size: 0.5em; /* Reduced size */
+        margin-bottom: -10px; /* Adjusted margin */
+        text-align: center;
+      }
+      /* Override title-container flex alignment so the title centers */
+      .title-container {
+        justify-content: center;
       }
       iframe {
         width: 115%;
@@ -159,44 +240,41 @@
       .project-description {
         max-width: 90%;
       }
-      .my_image{
+      .my_image {
         width: 70%;
         height: auto;
-      
+      }
+    }
+    @media (max-width: 600px) {
+      .btns {
+        display: none;
       }
     }
   </style>
 </head>
-
 <body>
-  <!--this is a progress bar for scrolling-->
+  <!-- Progress Bar -->
   <div class="progress-container">
     <div class="progress-bar" id="myBar"></div>
   </div>  
 
   <!-- Navigation -->
   <nav id="nav">
-    <!-- Hamburger Menu Icon for Mobile -->
     <div class="hamburger-icon">
       <a href="../index.html#home">
         <img src="../header/kh_logo.png" alt="Karam Haddad Logo" class="nav-logo">
       </a>
-      <!-- Menu Icon -->
       <div class="menu-icon" onclick="toggleMenu()">
         <span class="line line1"></span>
         <span class="line line2"></span>
       </div>
     </div>
-
-    <!-- Mobile Menu -->
     <div class="mobile-menu hidden">
       <a href="../index.html#home">Home</a>
       <a href="../index.html#experience">Experience</a>
       <a href="../index.html#projects">Projects</a>
       <a href="../index.html#contact">Contact</a>
     </div>
-
-    <!-- Desktop nav menu-->
     <ul class="desktop-menu">
       <a href="../index.html#home"><li><img src="../header/kh_logo.png" alt="Karam Haddad Logo" class="nav-logo"></li></a>
       <a href="../index.html#home"><li>Home</li></a>
@@ -206,104 +284,142 @@
     </ul>
   </nav>
 
-  <!--Banner for the picture of the front page-->
+  <!-- Banner -->
   <div id="home" class="banner">
     <h1>PLC and Instrumentation<br>Engineering Internships</h1>
-    <h3>Summer 2023 and Summer 2024</h3>
+    <h3>Summer 2023 &amp; 2024</h3>
   </div>
   
-  <!-- Project Section -->
-    <div class="project-container">
-      <header class="section-header">
-      </header>
-      <div class="project-description">
-        <h2 id="skills">Skills</h2>
+  <!-- Main Project Section -->
+  <div class="project-container">
+    <div class="project-description">
+      <h2 id="skills">Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-here">PLC Programming</div>
+        <div class="skill-here">Control System Design</div>
+        <div class="skill-here">Troubleshooting</div>
+        <div class="skill-here">Network Protocols- Modbus, HART</div>
+        <div class="skill-here">Level, Pressure, &amp; Temperature</div>
+        <div class="skill-here">P&amp;ID Interpretation</div>
+        <div class="skill-here">Safety Instrumented Systems (SIS)</div>
+        <div class="skill-here">Data Acquisition and Analysis</div>
+        <div class="skill-here">Industrial Automoation</div>
+        <div class="skill-here">Relay Logic</div>
+      </div>
 
-        <div class="skills-grid">
-          <div class="skill-here">PLC Programming</div>
-          <div class="skill-here">Control System Design</div>
-          <div class="skill-here">Troubleshooting</div>
-          <div class="skill-here">Network Protocols- Modbus, HART</div>
-          <div class="skill-here">Level, Pressure, & Temperature</div>
-          <div class="skill-here">P&ID Interpretation</div>
-          <div class="skill-here">Safety Instrumented Systems (SIS)</div>
-          <div class="skill-here">Data Acquisition and Analysis</div>
-          <div class="skill-here">Industrial Automoation</div>
-          <div class="skill-here">Relay Logic</div>
+      <br><br>
+
+      <!-- PLC Projects Carousel -->
+      <section id="experience" class="experience">
+        <div class="header-container">
+          <div class="title-container">
+            <!-- Unique ID for PLC title -->
+            <h2 id="plc-title" class="top-title">PLC Projects</h2>
+            <div class="btns">
+              <button id="exp-pre-btn" class="pre-btn">
+                <img src="../images/arrow.png" alt="Previous" loading="lazy">
+              </button>
+              <button id="exp-nxt-btn" class="nxt-btn">
+                <img src="../images/arrow.png" alt="Next" loading="lazy">
+              </button>
+            </div>
+          </div>
         </div>
-
-        <br>
-        <br>
-        <h2>PLC Projects</h2> 
-        <p>Here are some of the projects I worked on during my Summer term at ExxonMobil Polyethylene Plant.</p><br>
-        <div class="card-grid">
+        <div id="experience-container" class="experience-container">
           <div class="card">
             <div class="card__content">
               <strong>PLC Programming (Tricon)</strong><br>
-              <p>Programmed Tricon PLC to add temperature diagnostics for a burner, implementing alarms and historization in DCS to address frequent pre-startup events and improve equipment health monitoring.</p>
+              <p>Added temperature diagnostics for a burner, implementing alarms and historization in DCS to address failure events and improve equipment health monitoring.</p>
             </div>
           </div>
           <div class="card">
             <div class="card__content">
               <strong>HART Communication Implementation</strong><br>
-              <p>Implemented HART communication for critical control valves, enabling real-time diagnostics and performance monitoring, integrating with the analytics team's predictive models for equipment health.</p>
+              <p>Implemented HART communication for critical control valves, which allows for more diagnostics while eliminating extra wiring costs.</p>
             </div>
           </div>
           <div class="card">
             <div class="card__content">
               <strong>Wireless Gateway Installation</strong><br>
-              <p>Commissioned a wireless gateway installation, enabling field-wide wireless communication for <strong>100 devices</strong>, improving data collection and monitoring capabilities.</p>
+              <p>Enabled field-wide wireless communication for <strong>100 devices</strong>, improving data collection and monitoring capabilities.</p>
             </div>
           </div>
           <div class="card">
             <div class="card__content">
               <strong>PLC Power Supply Upgrade</strong><br>
-              <p>Upgraded obsolete PLC power supplies to ensure continuous system reliability and minimize disruptions, enhancing overall plant operations.</p>
+              <p>Ensure continuous system reliability and minimize disruptions, enhancing overall plant operations.</p>
             </div>
           </div>
         </div>
+      </section>
 
-        <h2 id="inst-proj">Instrumentation Projects</h2> 
-        <p>Here are some of the projects I worked on during my Summer term at ExxonMobil Downstream Refinery.</p><br>
-        <div class="card-grid">
+      <br><br>
+
+      <!-- Instrumentation Projects Carousel -->
+      <section id="instrumentation" class="experience">
+        <div class="header-container">
+          <div class="title-container">
+            <!-- Unique ID for Instrumentation title -->
+            <h2 id="inst-title" class="top-title">Instrumentation Projects</h2>
+            <div class="btns">
+              <button id="inst-pre-btn" class="pre-btn">
+                <img src="../images/arrow.png" alt="Previous" loading="lazy">
+              </button>
+              <button id="inst-nxt-btn" class="nxt-btn">
+                <img src="../images/arrow.png" alt="Next" loading="lazy">
+              </button>
+            </div>
+          </div>
+        </div>
+        <div id="experience-container2" class="experience-container">
           <div class="card">
             <div class="card__content">
               <strong>PLC Programming (Allen-Bradley and Tricon)</strong><br>
-              <p>Programmed Tricon and Allen-Bradley PLCs to speed up shutdown processes, reducing restart time by 6 hours and saving an estimated <strong>$250,000</strong> per incident.</p>
+              <p>Add input for operators to speed up shutdown processes, reducing restart time by 6 hours and saving an estimated <strong>$250,000</strong> per incident.</p>
             </div>
           </div>
           <div class="card">
             <div class="card__content">
               <strong>Smart Electronic Flow Control Upgrade</strong><br>
-              <p>Upgraded pneumatic flow control loops to a smart electronic system, replacing transmitters and valve controllers, allowing for easier maintenance and data for valve monitoring.</p>
+              <p>Upgraded pneumatic flow control loops to a smart electronic system, allowing for easier maintenance and data for valve monitoring.</p>
             </div>
           </div>
           <div class="card">
             <div class="card__content">
               <strong>Non-Intrusive Temperature Monitoring</strong><br>
-              <p>Implemented wireless temperature indication for monitoring on a heat exchanger, avoiding <strong>$150,000</strong> in premature replacement costs by mitigating high-temperature corrosion risks.</p>
+              <p>Temperature indication for monitoring on heat exchanger, avoiding <strong>$150,000</strong> in replacement costs by mitigating high-temperature damage.</p>
             </div>
           </div>
           <div class="card">
             <div class="card__content">
               <strong>Relay Logic Redesign</strong><br>
-              <p>Redesigned and learned about relay logic for critical trip, latch, and reset functions, enhancing plant safety and reliability.</p>
+              <p>Redesigned critical trip, latch, and reset functions, enhancing plant safety and reliability.</p>
             </div>
           </div>
         </div>
+      </section>
 
-        <h2>Overall Experience</h2>
-        <p>
-          My summer at ExxonMobil was impactful, with a supportive culture and focus on innovation. Outside work, I enjoyed sports, socializing with interns, and volunteering.<br>
-          Here are some images!
-        </p>
-        <div class="card-grid">
-          <img class="my_image" src="../exxon_experience/slide.gif" alt="ExxonMobil Internship Experience Pictures"/>
-        </div>
-        
+      <br><br>
+
+      <!-- Overall Experience Section -->
+      <h2>Overall Experience</h2>
+      <p>
+        My summer at ExxonMobil was impactful, with a supportive culture and focus on innovation. Outside work, I enjoyed sports, socializing with interns, and volunteering.<br>
+        Here are some images!
+      </p>
+      <div class="card-grid">
+        <img class="my_image" src="../exxon_experience/slide.gif" alt="ExxonMobil Internship Experience Pictures"/>
       </div>
     </div>
-  </section>
+  </div>
+
+  <footer>
+    <a href="#home">
+        <img src="../header/kh_logo.png" alt="Karam Haddad Logo" class="footer-logo" loading="lazy">
+    </a>
+    <p>&copy; 2025 Karam Haddad</p>
+    <p>This website was entirely built from scratch using JavaScript, HTML, and CSS by Karam Haddad</p>
+  </footer>
 
   <script src="../script.js"></script> <!-- Link to the nav -->
   <script src="../scroll_progress/scroll_progress.js"></script> <!-- Link to the scroll progress JS file -->

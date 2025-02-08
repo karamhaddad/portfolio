@@ -1,72 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Karam Haddad - Electrical Engineer, and Texas A&M University graduate. Explore my projects, experience, and skills online.">
-    <meta name="keywords" content="Karam Haddad, Electrical Engineer, Texas A&M University, engineering projects, portfolio">
-    <meta name="author" content="Karam Haddad">
-    <meta name="robots" content="index, follow">
-    <meta property="og:title" content="Karam Haddad">
-    <meta property="og:description" content="Explore the portfolio of Karam Haddad, featuring engineering projects, and more.">
-    <meta property="og:image" content="https://karamhaddad.com/header/kh_logo.png">
-    <meta property="og:url" content="https://karamhaddad.com/">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Karam Haddad - Electrical Engineer, and Texas A&M University graduate. Explore my projects, experience, and skills online.">
+  <meta name="keywords" content="Karam Haddad, Electrical Engineer, Texas A&M University, engineering projects, portfolio">
+  <meta name="author" content="Karam Haddad">
+  <meta name="robots" content="index, follow">
 
-    <script src="https://cdn.tailwindcss.com"></script> <!--Tailwind CSS for styling-->
+  <!-- Open Graph -->
+  <meta property="og:title" content="Karam Haddad">
+  <meta property="og:description" content="Explore the portfolio of Karam Haddad, featuring engineering projects, and more.">
+  <meta property="og:image" content="https://karamhaddad.com/header/kh_logo.png">
+  <meta property="og:url" content="https://karamhaddad.com/">
 
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link rel="stylesheet" type="text/css" href="css/nav.css">
-    <link rel="stylesheet" type="text/css" href="css/head.css">
-    <link rel="stylesheet" type="text/css" href="css/experience.css">
-    <link rel="stylesheet" type="text/css" href="css/contact.css">
-    <link rel="stylesheet" href="scroll_progress/scroll_progress.css"> <!-- Link to the scroll progress CSS file -->
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Karam Haddad - Electrical Engineer Portfolio">
+  <meta name="twitter:description" content="Explore Karam Haddad’s projects and experience in electrical engineering and more.">
+  <meta name="twitter:image" content="https://karamhaddad.com/header/kh_logo.png">
 
-    <title>Karam Haddad - Electrical Engineer Portfolio</title>
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://karamhaddad.com/">
 
-    <link rel="icon" type="image/x-icon" href="header/kh_logo.png">
-    <!--FONTS HERE--> 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"> <!-- Font Awesome for icons-->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet"> <!-- Google Fonts for Open Sans -->
+  <!-- Structured Data for SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Karam Haddad",
+    "url": "https://karamhaddad.com/",
+    "sameAs": [
+      "https://www.linkedin.com/in/karamhaddad",
+      "https://github.com/karamhaddad",
+      "https://www.youtube.com/channel/UCna_nPUbdNWrsZOvGvtCvCA"
+    ],
+    "jobTitle": "Electrical Engineer",
+    "alumniOf": {
+      "@type": "CollegeOrUniversity",
+      "name": "Texas A&M University"
+    }
+  }
+  </script>
 
+  <!-- Tailwind CSS for styling -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="css/nav.css">
+  <link rel="stylesheet" type="text/css" href="css/head.css">
+  <link rel="stylesheet" type="text/css" href="css/experience.css">
+  <link rel="stylesheet" type="text/css" href="css/contact.css">
+  <link rel="stylesheet" href="scroll_progress/scroll_progress.css">
+
+  <title>Karam Haddad - Electrical Engineer Portfolio</title>
+
+  <link rel="icon" type="image/x-icon" href="header/kh_logo.png">
+  <!--FONTS HERE-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet">
 </head>
 <body>
-    <!--this is a progress bar for scrolling-->
-    <div class="progress-container">
-        <div class="progress-bar" id="myBar"></div>
-    </div>  
+  <!-- Skip to content link for accessibility -->
+  <a class="skip-link" href="#main-content" style="position:absolute; left:-999px; top:-999px;">Skip to main content</a>
 
-    <nav id="nav">
-        <!-- Hamburger Menu Icon for Mobile -->
-        <div class="hamburger-icon"> 
-            <a href="#home">
-                <img src="header/kh_logo.png" alt="Karam Haddad Logo" class="nav-logo">
-            </a>
-            <!-- Menu Icon -->
-            <div class="menu-icon" onclick="toggleMenu()"> <!--calls toggle menu in js when clicked.-->
-                <span class="line line1"></span> <!-- Top line of = that will become part of X -->
-                <span class="line line2"></span> <!-- Bottom line of = that will become part of X -->
-            </div>
-        </div>
+  <!-- Progress bar for scrolling -->
+  <div class="progress-container">
+      <div class="progress-bar" id="myBar"></div>
+  </div>
 
-        <!-- Mobile Menu -->
-        <div class="mobile-menu hidden">
-            <a href="#home">Home</a>
-            <a href="#experience">Experience</a>
-            <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
-        </div>
-        <!-- Desktop nav menu-->
-        <ul class="desktop-menu">
-            <li><a href="#home"><img src="header/kh_logo.png" alt="Karam Haddad Logo" class="nav-logo"></a></li>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
+  <header>
+    <!-- Navigation -->
+    <nav id="nav" role="navigation" aria-label="Main Navigation">
+      <!-- Hamburger Menu Icon for Mobile -->
+      <div class="hamburger-icon">
+          <a href="#home">
+              <img src="header/kh_logo.png" alt="Karam Haddad Logo" class="nav-logo" loading="lazy">
+          </a>
+          <!-- Menu Icon -->
+          <div class="menu-icon" onclick="toggleMenu()" aria-label="Toggle navigation menu" tabindex="0">
+              <span class="line line1"></span>
+              <span class="line line2"></span>
+          </div>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div class="mobile-menu hidden">
+          <a href="#home">Home</a>
+          <a href="#experience">Experience</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+      </div>
+      <!-- Desktop nav menu -->
+      <ul class="desktop-menu">
+          <li><a href="#home"><img src="header/kh_logo.png" alt="Karam Haddad Logo" class="nav-logo" loading="lazy"></a></li>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+      </ul>
     </nav>
+  </header>
 
-    <div id="home" class="about-me">
-        <img src="header/headshot.jpg" alt="Karam Haddad Headshot" class="headshot">
+  <main id="main-content">
+    <!-- Home Section -->
+    <section id="home" class="about-me">
+        <img src="header/karam_haddad_headshot.jpg" alt="Karam Haddad Headshot" class="headshot" loading="lazy">
         <div class="mac-window">
             <div class="traffic-lights">
                 <div class="light red"></div>
@@ -74,33 +113,36 @@
                 <div class="light green"></div>
             </div>
             <div class="typewriter">
-                <!--This is where the typewrite effect happens. 5xl is scaling size, bold, and white color-->
+                <!-- Typewrite effect for name -->
                 <h1 id="name">Karam Haddad</h1>
             </div>
         </div>
-        <!--<a href="https://docs.google.com/document/d/1ZLVUx_X2Up4vq6tpXCSxZeAjEZB9d59mdhuybr0AU9k/edit?usp=sharing" target="_blank"> 
+        <!-- Uncomment if you wish to include the resume button -->
+        <!--
+        <a href="https://docs.google.com/document/d/1ZLVUx_X2Up4vq6tpXCSxZeAjEZB9d59mdhuybr0AU9k/edit?usp=sharing" target="_blank">
             <button class="button-64" role="button"><span class="text">My Resume</span></button>
-        </a>--> 
-        
-    </div>
+        </a>
+        -->
+    </section>
 
-    <div id="experience" class="experience">
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
         <div class="header-container">
             <div class="title-container">
                 <h1 id="top-page-exp">Experience</h1>
                 <div class="btns">
-                    <button id="exp-pre-btn" class="pre-btn"><img src="images/arrow.png" alt=""></button>
-                    <button id="exp-nxt-btn" class="nxt-btn"><img src="images/arrow.png" alt=""></button>
+                    <button id="exp-pre-btn" class="pre-btn"><img src="images/arrow.png" alt="Previous" loading="lazy"></button>
+                    <button id="exp-nxt-btn" class="nxt-btn"><img src="images/arrow.png" alt="Next" loading="lazy"></button>
                 </div>
             </div>
         </div>
-        <section class="experience"> 
+        <section class="experience">
             <div id="experience-container" class="experience-container">
                 <div class="experience-card">
                     <div class="experience-info">
                         <h2 class="experience-brand">Applications Engineer (Full Time)</h2>
                         <div class="experience-image">
-                            <img src="experience/txn.png" class="experience-thumb" alt="Texas Instruments logo">
+                            <img src="experience/txn.png" class="experience-thumb" alt="Texas Instruments logo" loading="lazy">
                         </div>
                         <p class="experience-date">
                             <em>Texas Instruments</em>
@@ -119,7 +161,7 @@
                     <div class="experience-info">
                         <h2 class="experience-brand">Instrumentation Engineer (Intern)</h2>
                         <div class="experience-image">
-                            <img src="experience/ExxonMobil1.webp" class="experience-thumb" alt="ExxonMobil internship logo">
+                            <img src="experience/ExxonMobil1.webp" class="experience-thumb" alt="ExxonMobil internship logo" loading="lazy">
                         </div>
                         <p class="experience-date">
                             <em>ExxonMobil</em>
@@ -137,7 +179,7 @@
                     <div class="experience-info">
                         <h2 class="experience-brand">PLC Engineer (Intern)<br><br></h2>
                         <div class="experience-image">
-                            <img src="experience/ExxonMobil1.webp" class="experience-thumb" alt="ExxonMobil internship logo">
+                            <img src="experience/ExxonMobil1.webp" class="experience-thumb" alt="ExxonMobil internship logo" loading="lazy">
                         </div>
                         <p class="experience-date">
                             <em>ExxonMobil</em>
@@ -156,7 +198,7 @@
                     <div class="experience-info">
                         <h2 class="experience-brand">Bachelor of Science in Electrical Engineering</h2>
                         <div class="experience-image">
-                            <img src="experience/tamu.png" class="experience-thumb" alt="Texas A&M University logo">
+                            <img src="experience/tamu.png" class="experience-thumb" alt="Texas A&M University logo" loading="lazy">
                         </div>
                         <p class="experience-date">
                             <em>Texas A&M University</em>
@@ -179,7 +221,7 @@
                     <div class="experience-info">
                         <h2 class="experience-brand">Minor in Computer Science</h2>
                         <div class="experience-image">
-                            <img src="experience/tamu.png" class="experience-thumb" alt="Texas A&M University logo">
+                            <img src="experience/tamu.png" class="experience-thumb" alt="Texas A&M University logo" loading="lazy">
                         </div>
                         <p class="experience-date">
                             <em>Texas A&M University</em>
@@ -195,11 +237,13 @@
                         </p>
                     </div>
                     <a href="experience.html#tamucs"><button class="card-btn">Learn More</button></a>
+                </div>
             </div>
         </section>
-    </div>
+    </section>
 
-    <div id="skills" class="bg-custom text-white font-sans p-5 text-center">
+    <!-- Skills Section -->
+    <section id="skills" class="bg-custom text-white font-sans p-5 text-center">
         <h1 id="top-page-skills">Skills</h1>
         <div class="container mx-auto">
             <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 justify-center">
@@ -274,28 +318,26 @@
 
             </div>
         </div>
-    </div>
+    </section>
 
-    <div id="projects" class="projects">
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
         <div class="header-container">
             <div class="title-container">
                 <h1 id="top-page-projects">Projects</h1>
                 <div class="btns">
-                    <button id="proj-pre-btn" class="pre-btn"><img src="images/arrow.png" alt=""></button>
-                    <button id="proj-nxt-btn" class="nxt-btn"><img src="images/arrow.png" alt=""></button>
+                    <button id="proj-pre-btn" class="pre-btn"><img src="images/arrow.png" alt="Previous" loading="lazy"></button>
+                    <button id="proj-nxt-btn" class="nxt-btn"><img src="images/arrow.png" alt="Next" loading="lazy"></button>
                 </div>
             </div>
         </div>
-        <section class="experience"> 
-            <!--same experience carousel used here.-->
-            
+        <section class="experience">
             <div id="projects-container" class="experience-container">
-                <!--experience container class to take the css/JS for the same carousel.-->
                 <div class="experience-card">
                     <div class="experience-info">
                         <h2 class="experience-brand">Prefetcher Simulation for Rowhammer Attack </h2>
                         <div class="experience-image">
-                            <img src="projects/pref.png" class="experience-thumb" alt="Object Avoiding Smart Bot">
+                            <img src="projects/pref.png" class="experience-thumb" alt="Prefetcher Simulation for Rowhammer Attack" loading="lazy">
                         </div>
                         <p class="experience-date">
                             <em>December 2024</em>
@@ -313,14 +355,14 @@
                     <div class="experience-info">
                         <h2 class="experience-brand">Automatic Analog Lighting System</h2>
                         <div class="experience-image">
-                            <img src="projects/auto_light.png" class="experience-thumb" alt="Object Avoiding Smart Bot">
+                            <img src="projects/auto_light.png" class="experience-thumb" alt="Automatic Analog Lighting System" loading="lazy">
                         </div>
                         <p class="experience-date">
                             <em>December 2023</em>
                         </p>
                         <p class="experience-description">
                             <ul>
-                                <li><em>Pure elctronics magic:</em></li>
+                                <li><em>Pure electronics magic:</em></li>
                                 <li>Op-amps, transistors, and sensors work together to illuminate light when dark and motion is detected.</li>
                             </ul>
                         </p>
@@ -332,7 +374,7 @@
                     <div class="experience-info">
                         <h2 class="experience-brand">Object Avoiding Smart Bot</h2>
                         <div class="experience-image">
-                            <img src="projects/pi_pico.png" class="experience-thumb" alt="Object Avoiding Smart Bot">
+                            <img src="projects/pi_pico.png" class="experience-thumb" alt="Object Avoiding Smart Bot" loading="lazy">
                         </div>
                         <p class="experience-date">
                             <em>April 2024</em>
@@ -351,7 +393,7 @@
                     <div class="experience-info">
                         <h2 class="experience-brand">Alarm Clock and Weather Tracking</h2>
                         <div class="experience-image">
-                            <img src="projects/clock.png" class="experience-thumb" alt="Alarm Clock and Weather Tracking">
+                            <img src="projects/clock.png" class="experience-thumb" alt="Alarm Clock and Weather Tracking" loading="lazy">
                         </div>
                         <p class="experience-date">
                             <em>January 2024</em>
@@ -370,7 +412,7 @@
                     <div class="experience-info">
                         <h2 class="experience-brand">Web Developing & Portfolio</h2>
                         <div class="experience-image">
-                            <img src="projects/seo.png" class="experience-thumb" alt="Web Development & Portfolio">
+                            <img src="projects/seo.png" class="experience-thumb" alt="Web Developing & Portfolio" loading="lazy">
                         </div>
                         <p class="experience-date">
                             <em>February 2024</em>
@@ -384,10 +426,10 @@
                 </div>
             </div>
         </section>
-    </div>
+    </section>
 
     <!-- Contact Section -->
-    <div id="contact" class="bg-custom text-white p-5 py-0 text-center">
+    <section id="contact" class="bg-custom text-white p-5 py-0 text-center">
         <h1 id="top-page-contact">Get in touch</h1>
         <div class="flex justify-center gap-10">
             <!-- Email -->
@@ -414,17 +456,18 @@
                 <span>YouTube</span>
             </a>
         </div>
-    </div>
+    </section>
+  </main>
 
-    <footer>
-        <a href="#home">
-            <img src="header/kh_logo.png" alt="Karam Haddad Logo" class="footer-logo">
-        </a>
-        <p>&copy; 2025 Karam Haddad</p>
-        <p>This website was entirely built from scratch using JavaScript, HTML, and CSS by Karam Haddad</p>
-    </footer>
+  <footer>
+      <a href="#home">
+          <img src="header/kh_logo.png" alt="Karam Haddad Logo" class="footer-logo" loading="lazy">
+      </a>
+      <p>&copy; 2025 Karam Haddad</p>
+      <p>This website was entirely built from scratch using JavaScript, HTML, and CSS by Karam Haddad</p>
+  </footer>
 
-    <script src="script.js"></script>
-    <script src="scroll_progress/scroll_progress.js"></script> <!-- Link to the scroll progress JS file -->
+  <script src="script.js"></script>
+  <script src="scroll_progress/scroll_progress.js"></script>
 </body>
 </html>
