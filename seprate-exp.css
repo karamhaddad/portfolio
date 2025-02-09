@@ -1,6 +1,5 @@
 /* Custom styles replacing Tailwind utility classes */
 body {
-  font-family: 'Courier New', Courier, monospace;
   background-color: #101010;
   color: #F5F5F7; /* Moved color here for broader application */
 }

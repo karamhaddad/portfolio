@@ -3,6 +3,9 @@
   margin:0px;
   padding:0px;
 }
+main#main-content {
+  padding-top: 65px; /* Adjust this value based on your nav bar's actual height */
+}
 
 /* Styling for the navigation bar DESKTOP============================================================VVVVVV*/
 nav {
@@ -11,7 +14,8 @@ nav {
   overflow: hidden;
   text-align: center;
   z-index: 10; /* Keeps it above everything */
-  position: sticky;
+  position: fixed;
+  width:100%;
   top: 0; /* Sticks to the top */
   height: auto;
   box-shadow: 0 3px 4px rgba(0, 0, 0, 0.211); /* Soft shadow */
@@ -36,8 +40,6 @@ nav ul li {
   display: flex;
   align-items: center;
   justify-content: center;
-
-  font-family: 'Courier New', Courier, monospace;
   font-weight: 200;
 }
 
@@ -81,7 +83,6 @@ nav ul li:hover {
   color: #d8d5db;
   text-decoration: none;
   border-bottom: 1px solid #444;
-  font-family: 'Courier New', Courier, monospace;
   font-size: 20px;
 }
 

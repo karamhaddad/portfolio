@@ -46,6 +46,7 @@
   <!-- Tailwind CSS for styling -->
   <script src="https://cdn.tailwindcss.com"></script>
 
+  <!-- Your CSS Files -->
   <link rel="stylesheet" type="text/css" href="css/style.css">
   <link rel="stylesheet" type="text/css" href="css/nav.css">
   <link rel="stylesheet" type="text/css" href="css/head.css">
@@ -56,9 +57,24 @@
   <title>Karam Haddad - Electrical Engineer Portfolio</title>
 
   <link rel="icon" type="image/x-icon" href="header/kh_logo.png">
-  <!--FONTS HERE-->
+  
+  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet">
+  
+  <!-- Include Space Mono from Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  
+  <!-- Global Font Settings -->
+  <style>
+    /* Set Space Mono as the default font for the entire body */
+    body {
+      font-family: 'Space Mono', monospace;
+    }
+    /* Ensure the #skills section uses Space Mono (overriding Tailwind classes) */
+    #skills {
+      font-family: 'Space Mono', monospace !important;
+    }
+  </style>
 </head>
 <body>
   <!-- Skip to content link for accessibility -->
@@ -113,7 +129,7 @@
                 <div class="light green"></div>
             </div>
             <div class="typewriter">
-                <!-- Typewrite effect for name -->
+                <!-- Typewriter effect for name -->
                 <h1 id="name">Karam Haddad</h1>
             </div>
         </div>
@@ -148,10 +164,10 @@
                             <em>Texas Instruments</em>
                         </p>
                         <p class="experience-date">
-                            <em>January 2025 - Present</em>
+                            <em>Jan 2025 - Present</em>
                         </p>
                         <p class="experience-description">
-                            Embedded Processing Hardware Applications<br><br>
+                            Embedded Processing Hardware Applications<br>
                             Check out my <em>personal</em> embedded projects.
                         </p>
                     </div>
@@ -177,7 +193,7 @@
                 </div>
                 <div class="experience-card">
                     <div class="experience-info">
-                        <h2 class="experience-brand">PLC Engineer (Intern)<br><br></h2>
+                        <h2 class="experience-brand">PLC Engineer (Intern)</h2>
                         <div class="experience-image">
                             <img src="experience/ExxonMobil1.webp" class="experience-thumb" alt="ExxonMobil internship logo" loading="lazy">
                         </div>
@@ -188,7 +204,7 @@
                             <em>May 2023 - August 2023</em>
                         </p>
                         <p class="experience-description">
-                            Experience with PLC programming, system integration, communicaiton protocols, and singal processing.
+                            Experience with PLC programming, system integration, communicaiton protocols, and signal processing.
                         </p>
                     </div>
                     <a href="exxon_experience/exxon.html"><button class="card-btn">Learn More</button></a>
@@ -196,7 +212,7 @@
 
                 <div class="experience-card">
                     <div class="experience-info">
-                        <h2 class="experience-brand">Bachelor of Science in Electrical Engineering</h2>
+                        <h2 class="experience-brand">B.S. in Electrical Engineering</h2>
                         <div class="experience-image">
                             <img src="experience/tamu.png" class="experience-thumb" alt="Texas A&M University logo" loading="lazy">
                         </div>
@@ -210,7 +226,7 @@
                             Relevant coursework:<br>
                             Analog Electronics<br>
                             Digital Electronics<br>
-                            Integrated Circuit Design<br>
+                            IC Design<br>
                             Material Electronics<br>
                         </p>
                     </div>
@@ -248,7 +264,7 @@
         <div class="container mx-auto">
             <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 justify-center">
                 <!-- Technical Skills -->
-                <div class="col-span-2 md:col-span-3 lg:col-span-4 ">
+                <div class="col-span-2 md:col-span-3 lg:col-span-4">
                     <h3 class="font-semibold text-lg">Technical Skills:</h3>
                     <div class="flex flex-wrap gap-2 mt-2 justify-center">
                         <div class="flex items-center gap-2 bg-purple-500 px-3 py-1 rounded">
@@ -315,7 +331,6 @@
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
     </section>
@@ -335,18 +350,18 @@
             <div id="projects-container" class="experience-container">
                 <div class="experience-card">
                     <div class="experience-info">
-                        <h2 class="experience-brand">Prefetcher Simulation for Rowhammer Attack </h2>
+                        <h2 class="experience-brand">Prefetcher Simulation for Rowhammer Attack</h2>
                         <div class="experience-image">
                             <img src="projects/pref.png" class="experience-thumb" alt="Prefetcher Simulation for Rowhammer Attack" loading="lazy">
                         </div>
                         <p class="experience-date">
                             <em>December 2024</em>
                         </p>
-                        <p class="experience-description">
+                        <div class="experience-description">
                             <ul>
                                 <li>Designed and simulated prefetchers, improved CPU speed, analyzed security, won third place Capstone award.</li>
                             </ul>
-                        </p>
+                        </div>
                     </div>
                     <a href="rowhammer_project/prefetcher.html"><button class="card-btn">Learn More</button></a>
                 </div>
@@ -360,12 +375,12 @@
                         <p class="experience-date">
                             <em>December 2023</em>
                         </p>
-                        <p class="experience-description">
+                        <div class="experience-description">
                             <ul>
-                                <li><em>Pure electronics magic:</em></li>
+                                <li><em>Electronics magic:</em></li>
                                 <li>Op-amps, transistors, and sensors work together to illuminate light when dark and motion is detected.</li>
                             </ul>
-                        </p>
+                        </div>
                     </div>
                     <a href="projects.html#light"><button class="card-btn">Learn More</button></a>
                 </div>
@@ -379,12 +394,12 @@
                         <p class="experience-date">
                             <em>April 2024</em>
                         </p>
-                        <p class="experience-description">
+                        <div class="experience-description">
                             <ul>
                                 <li>Algorithm to avoid obstacles with sensors.</li>
                                 <li>Control motors with microcontroller.</li>
                             </ul>
-                        </p>
+                        </div>
                     </div>
                     <a href="car_project/car.html"><button class="card-btn">Learn More</button></a>
                 </div>
@@ -398,12 +413,12 @@
                         <p class="experience-date">
                             <em>January 2024</em>
                         </p>
-                        <p class="experience-description">
+                        <div class="experience-description">
                             <ul>
                                 <li>Seven-segment display from scratch.</li>
                                 <li>Algorithm for displaying info.</li>
                             </ul>
-                        </p>
+                        </div>
                     </div>
                     <a href="projects.html#clock"><button class="card-btn">Learn More</button></a>
                 </div>
@@ -417,7 +432,7 @@
                         <p class="experience-date">
                             <em>February 2024</em>
                         </p>
-                        <p class="experience-description">
+                        <div class="experience-description">
                             Developed websites and helped drive to the top of search engine results.<br>
                             <br>Learned SEO, HTML, CSS, JS.
                         </p>

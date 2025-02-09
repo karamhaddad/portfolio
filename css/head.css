@@ -78,7 +78,6 @@
   /* Styling for typewriter effect */
   font-weight:normal; /*instead of usual bold for h1*/
   padding-top:2px;
-  font-family: 'Courier New', Courier, monospace;
   font-size: 2.5em;
 
   overflow: hidden;
@@ -93,7 +92,6 @@
 
 .text{
   font-size: 1.2em;
-  font-family: 'Courier New', Courier, monospace;
   font-color: #F5F5F7;
 }
 

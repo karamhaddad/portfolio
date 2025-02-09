@@ -52,8 +52,7 @@
   </script>
 
   <!-- Fonts & Icons -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 
   <!-- CSS Files -->
   <link rel="stylesheet" type="text/css" href="../css/experience.css">
@@ -64,6 +63,14 @@
 
   <link rel="icon" type="image/x-icon" href="../header/kh_logo.png">
 
+  <!-- Global Styles: Apply the monospace font all over -->
+  <style>
+    body {
+      font-family: 'Space Mono', monospace;
+    }
+  </style>
+  
+  <!-- Additional styles for this page (banner, cards, etc.) -->
   <style>
     /* ---------- Base Styles ---------- */
     .banner {
@@ -109,8 +116,8 @@
       padding: 10px;
       background-color: #333;
       color: #e8e8e8;
-      font-size: 14px;
-      font-weight: 600;
+      font-size: 12px;
+      font-weight: 500;
       border-radius: 10px;
       width: 120px;
       height: 40px;
@@ -154,7 +161,6 @@
       padding-right: 14px;
       padding-bottom: 14px;
       margin-right:10px;
-      box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
       background-image: linear-gradient(135deg, #7b4397, #dc2430);
       margin-bottom: 10px;
       flex: 0 0 auto;
@@ -177,9 +183,8 @@
     /* ---------- Carousel Container ---------- */
     .top-title {
       z-index: 5; /* so it's above the carousel */
-      margin-bottom: -30px; /* lower it to get to the carousel */
+      margin-bottom: -15px; /* lower it to get to the carousel */
       color: #F5F5F7;
-      font-family: 'Courier New', monospace;
     }
     .experience-container {
       display: flex;
@@ -377,7 +382,7 @@
           <div class="card">
             <div class="card__content">
               <strong>PLC Programming (Tricon)</strong><br>
-              <p>Added temperature diagnostics for a burner, implementing alarms and historization in DCS to address failure events and improve equipment health monitoring.</p>
+              <p>Programmed burner temperature diagnostics with DCS alarms and historization to mitigate failures and enhance monitoring.</p>
             </div>
           </div>
           <div class="card">
