@@ -43,14 +43,16 @@ body {
 }
 
 footer{
+  margin-top:15px;
   text-align: center;
   color: #F5F5F7;
-  background-color: #101010;
+  background-color: #222222;
   padding:15px;
+  font-size: 0.9em;
 }
 
 .footer-logo{
-  width: 40px;
+  width: 30px;
   margin:auto;
   padding-bottom:10px; 
 }
