@@ -113,6 +113,7 @@ body {
     font-size: 3.2rem;
   }
   .section-header {
+    margin-top: 1.5rem; /*fixed the glitch where in phone mode, nav menu cropped a little of top*/
     margin-bottom: 1.5rem;
   }
   .projects-section {

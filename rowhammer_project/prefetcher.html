@@ -163,7 +163,7 @@
       
       <h2>Prefetching</h2>
       <p>
-        Prefetching is a technique that loads data into the cache <strong>before it’s needed</strong>. By predicting future data requirements, prefetching improves program execution speed.
+        Prefetching is a technique that loads data into the cache <strong>before it's needed</strong>. By predicting future data requirements, prefetching improves program execution speed.
         <img src="1.png" alt="Audio Clustering" class="steps-image">
         <span class="figure-text"><br><strong>Figure 1:</strong> Prefetchers explained [1]</span>
       </p><br>
@@ -196,7 +196,7 @@
           <li><strong>Inflight Prefetch Table (IPT)</strong></li>
           <li><strong>Recent Request Program Counter Queue (RRPCQ)</strong></li>
         </ul>
-        <li>Followed the research paper’s methodology for learning addresses, timing, and issuing prefetches.</li>
+        <li>Followed the research paper's methodology for learning addresses, timing, and issuing prefetches.</li>
       </ul>
       <p><img src="4.png" alt="Audio Clustering" class="steps-image">
         <span class="figure-text"><br><strong>Figure 4:</strong> T-SKID Issuing a prefetch (a), and learning timing (b) [6]</span></p>
@@ -251,7 +251,7 @@
       <p>
         My prefetcher was able to get the highest IPC and the lowest hammer rate when compared to other prefetchers, while still retaining strong accuracy.
         <br><br>Furthermore, we were able to achieve our original goals: <br>
-        1. Improved sponsor’s Row Hammer survey.<br>
+        1. Improved sponsor's Row Hammer survey.<br>
         2. Successfully validated prefetcher implementations with research papers.<br>
         3. Achieved performance speedups and analyzed row activation trends.<br>
         4. Developed prefetchers that provide a foundation for further research. <br>
@@ -287,11 +287,20 @@
 </section>
 
 <footer>
-  <a href="#home">
-    <img src="../header/kh_logo.png" alt="Karam Haddad Logo" class="footer-logo" loading="lazy">
-  </a>
-  <p>&copy; 2025 Karam Haddad</p>
-  <p>This website was entirely built from scratch using JavaScript, HTML, and CSS by Karam Haddad</p>
+  <div class="footer-content">
+    <a href="../index.html#home">
+      <img src="../header/kh_logo.png" alt="Karam Haddad Logo" class="footer-logo" loading="lazy">
+    </a>
+    <div class="footer-links">
+      <a href="../index.html#home">Home</a>
+      <a href="../index.html#projects">Projects</a>
+      <a href="../index.html#experience">Experience</a>
+      <a href="../index.html#contact">Contact</a>
+    </div>
+    <p>&copy; 2025 Karam Haddad</p>
+    <p>This website was entirely built from scratch using JavaScript, HTML, and CSS by Karam Haddad</p>
+    <button id="useless-button" class="useless-button">Useless Button</button>
+  </div>
 </footer>
 
   <script src="../script.js"></script> <!-- Link to the nav -->
