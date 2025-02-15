@@ -12,7 +12,7 @@
   <link rel="stylesheet" type="text/css" href="css/style.css">
   <link rel="stylesheet" type="text/css" href="css/nav.css">
   <link rel="stylesheet" href="seprate-exp.css"> <!-- Link to the external CSS file -->
-
+  <link rel="stylesheet" href="scroll_progress/scroll_progress.css">
   <link rel="icon" type="image/x-icon" href="header/kh_logo.png">
   
 </head>
@@ -25,6 +25,12 @@
 </style>
 
 <body>
+  <!-- Progress Bar for Scrolling -->
+  <div class="progress-container">
+    <div class="progress-bar" id="myBar"></div>
+  </div>
+  <!-- (Optional) Skip to content link for accessibility -->
+  <a class="skip-link" href="#main-content" style="position:absolute; left:-999px; top:-999px;">Skip to main content</a>
   <nav id="nav">
       <!-- Hamburger Menu Icon for Mobile -->
     <div class="hamburger-icon"> 
@@ -159,5 +165,6 @@
   </footer>
 
   <script src="script.js"></script> <!-- Link to the nav -->
+  <script src="scroll_progress/scroll_progress.js"></script>
 </body>
 </html>
