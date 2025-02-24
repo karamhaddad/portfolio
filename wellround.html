@@ -57,6 +57,9 @@
       color: #F5F5F7;
       padding: 0 20px;
       font-family: 'Space Mono', monospace;
+      max-width: 90%;
+      width: 100%;
+      margin: 0 auto;
     }
 
     .hero-title {
@@ -73,6 +76,7 @@
       text-shadow: 2px 2px 4px rgba(123, 67, 151, 0.3);
       letter-spacing: 2px;
       animation: gradient 3s linear infinite;
+      word-wrap: break-word;
     }
 
     @keyframes gradient {
@@ -85,10 +89,10 @@
       font-size: 28px;
       opacity: 0.8;
       max-width: 600px;
-      margin: 0 auto;
+      margin: 30px auto 0;
       font-family: 'Space Mono', monospace;
       line-height: 1.4;
-      margin-top: 30px;
+      word-wrap: break-word;
     }
 
     .feature-section {
@@ -191,16 +195,34 @@
         background-position: center;
         transform: translateY(0);  /* Reset position on mobile */
       }
+      .hero-content {
+        max-width: 95%;
+      }
+      
       .hero-title {
         font-size: 42px;
       }
       
       .hero-subtitle {
         font-size: 20px;
+        max-width: 100%;
       }
 
       .feature-section {
         padding: 40px 20px;
+      }
+    }
+
+    /* Extra small devices */
+    @media (max-width: 480px) {
+      .hero-title {
+        font-size: 36px;
+        margin-top: 380px; /* Slightly reduced top margin */
+      }
+      
+      .hero-subtitle {
+        font-size: 16px;
+        line-height: 1.5;
       }
     }
 
