@@ -17,6 +17,8 @@
   <style>
     body {
       font-family: 'Space Mono', monospace;
+      overflow-x: hidden; /* Prevent horizontal scrolling */
+      width: 100%;
     }
     .banner {
       margin: 0;
@@ -27,13 +29,20 @@
       url(../ai_banner.webp);
       background-size: cover;
       background-position: center;
-
-      color:#d8d5db;
+      color: #d8d5db;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
       text-align: center;
+      box-sizing: border-box; /* Include padding in width calculation */
+    }
+
+    .banner h1 {
+      max-width: 800px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 0 20px;
     }
 
     h2 {
@@ -98,9 +107,12 @@
         font-size: 2em;
       }
       iframe {
-        width: 115%;
+        width: 100%; /* Changed from 115% to prevent overflow */
         height: auto;
         aspect-ratio: 16/9;
+      }
+      .banner h1 {
+        padding: 0 20px;
       }
     }
   </style>
@@ -146,23 +158,21 @@
 
   <!-- Project Section -->
 <div id="home" class="banner">
-  <h1 class="top-page-title">Prefetcher Simulation for Row Hammer Attacks</h1>
+  <h1 class="top-page-title">Prefetcher Simulation<br>for Row Hammer Attacks</h1>
 </div> 
 
 <section class="tldr-section" style="background-color: #222; color: #F5F5F7;">
   <div class="container" style="padding: 1rem 2rem;">
-    <p><strong>TLDR:</strong> I developed T-SKID, a timing-based prefetcher to
-       mitigate Row Hammer attacks (errors from rapid memory accesses). It reaches 91% accuracy, lowers vulnerability 
-      by 90%, and boosts IPC by 55%. Our work, including other prefetchers, earned us the <strong>3rd place award</strong> at Texas A&M's Electrical Engineering Capstone.</p>
+    <p><strong>TLDR:</strong> I Implemented and programmed one prefetcher out of four, with a team of four, in C++ for Texas A&M University's 2024 Electrical Engineering Capstone. <br>
+      <br>My prefetcher that I implemented, Timing-SKID (T-SKID)[6], achieved up to <strong>91% accuracy</strong>, reduced Row Hammer vulnerability (errors from rapid memory accesses) by up to <strong>90%</strong>, and up to <strong>55% Instruction Per Cycle (IPC) improvement</strong>.
   </div>
 </section>
 
 <section class="projects-section">
   <div class="project-container">
     <div class="project-description">
-      I Implemented and programmed four prefetchers as a team of four from research papers in C++ for Texas A&M University's 2024 Electrical Engineering Capstone. <br>
-      <br>My prefetcher that I implemented, Timing-SKID (T-SKID)[6], achieved up to <strong>91% accuracy</strong>, reduced Row Hammer vulnerability by up to <strong>90%</strong>, and up to <strong>55% Instruction Per Cycle (IPC) improvement</strong>.
       <img src="award.png" alt="Team winning an award at the Texas A&M Capstone" class="steps-image"> <br>
+      <span class="figure-text"><br>Our team won <strong>3rd place</strong> award at Texas A&M's Electrical Engineering Capstone!</span>
       <h2>Background</h2>
       <ul>
         <li>The goal of this project is to enhance Texas A&M's survey by adding more devices to the list</li>
