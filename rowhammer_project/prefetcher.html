@@ -26,6 +26,7 @@
     .top-page-title,
     .skill {
       font-family: 'Montserrat', sans-serif;
+      font-size: 2em;
     }
     
     p, li, .figure-text {
@@ -47,14 +48,18 @@
       align-items: center;
       justify-content: center;
       text-align: center;
-      box-sizing: border-box; /* Include padding in width calculation */
+      box-sizing: border-box;
     }
 
-    .banner h1 {
+    .top-page-title {
+      font-size: 2.8em;
+      font-weight: 700;
       max-width: 800px;
       width: 100%;
-      margin: 0 auto;
+      margin: 50px auto;
       padding: 0 20px;
+      line-height: 1.3;
+      text-align: center;
     }
 
     h2 {
@@ -108,8 +113,15 @@
       .steps-image {
         width: 300px;
       }
+      .banner {
+        padding-top: 80px;
+        padding-bottom: 80px;
+      }
       .top-page-title {
-        font-size: 2em;
+        font-size: 1.8em;
+        margin: 20px auto;
+        width: 90%;
+        text-align: center;
       }
       h2 {
         font-size: 2em;
@@ -122,6 +134,80 @@
       .banner h1 {
         padding: 0 20px;
       }
+    }
+    @media (max-width: 480px) {
+      .top-page-title {
+        font-size: 1.8em;
+      }
+    }
+
+    /* Add gradient styling for the TLDR section */
+    .tldr-section {
+      background-color: #222;
+      color: #F5F5F7;
+      padding: 1.5rem 0;
+    }
+    
+    .tldr-section .container {
+      padding: 1rem 2rem;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    
+    .tldr-title {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 1.5em;
+      margin-bottom: 10px;
+      background: linear-gradient(to right, #7b4397, #dc2430, #7b4397);
+      background-size: 200% auto;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-shadow: 1px 1px 3px rgba(123, 67, 151, 0.3);
+      animation: gradient 3s linear infinite;
+      display: inline-block;
+    }
+    
+    .highlight {
+      font-weight: 700;
+      background: linear-gradient(to right, #7b4397, #dc2430);
+      background-size: 200% auto;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    /* Add gradient button styling */
+    .gradient-button {
+      display: inline-block;
+      padding: 12px 24px;
+      margin: 10px;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      font-size: 1rem;
+      text-decoration: none;
+      border-radius: 30px;
+      color: #fff;
+      background: linear-gradient(to right, #7b4397, #dc2430);
+      background-size: 200% auto;
+      transition: 0.3s ease;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 4px 15px rgba(123, 67, 151, 0.3);
+    }
+    
+    .gradient-button:hover {
+      background-position: right center;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(220, 36, 48, 0.4);
+    }
+    
+    .button-container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin: 30px 0;
     }
   </style>
 </head>
@@ -166,13 +252,14 @@
 
   <!-- Project Section -->
 <div id="home" class="banner">
-  <h1 class="top-page-title">Prefetcher Simulation<br>for Row Hammer Attacks</h1>
+  <h1 class="top-page-title">Prefetcher Simulation for Row Hammer Attacks</h1>
 </div> 
 
-<section class="tldr-section" style="background-color: #222; color: #F5F5F7;">
-  <div class="container" style="padding: 1rem 2rem;">
-    <p><strong>TLDR:</strong> I Implemented and programmed one prefetcher out of four, with a team of four, in C++ for Texas A&M University's 2024 Electrical Engineering Capstone. <br>
-      <br>My prefetcher that I implemented, Timing-SKID (T-SKID)[6], achieved up to <strong>91% accuracy</strong>, reduced Row Hammer vulnerability (errors from rapid memory accesses) by up to <strong>90%</strong>, and up to <strong>55% Instruction Per Cycle (IPC) improvement</strong>.
+<section class="tldr-section">
+  <div class="container">
+    <span class="tldr-title">TLDR:</span>
+    <p>I Implemented and programmed one prefetcher out of four, with a team of four, in C++ for Texas A&M University's 2024 Electrical Engineering Capstone.</p>
+    <p>My prefetcher that I implemented, Timing-SKID (T-SKID)[6], achieved up to <span class="highlight">91% accuracy</span>, reduced Row Hammer vulnerability (errors from rapid memory accesses) by up to <span class="highlight">90%</span>, and up to <span class="highlight">55% Instruction Per Cycle (IPC) improvement</span>.</p>
   </div>
 </section>
 
@@ -297,16 +384,9 @@
         </ul>
       </p>
 
-
-      <div class="skills">
-        <a href="../index.html#contact" class="skill">
-          <i class="fas fa-envelope"></i>
-          <span>Contact Me</span>
-        </a>
-        <a href="../index.html#projects" class="skill">
-          <i class="fas fa-home"></i>
-          <span>Return Home</span>
-        </a>
+      <div class="button-container">
+        <a href="../index.html#contact" class="gradient-button">Contact Me</a>
+        <a href="../index.html" class="gradient-button">Return Home</a>
       </div>
     </div>
   </div>
