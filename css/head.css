@@ -30,15 +30,17 @@
   margin-top: 30px;
 }
 
-.mac-window{
+.mac-window {
   background: #1e1e1e;
-  border-radius:8px;
+  border-radius: 8px;
   padding: 2rem;
   padding-top: 2.5rem; /*to make room for the traffic light*/
-  position:relative;
+  position: relative;
   margin: 2rem auto 10px auto; /*top, right, bottom, left.*/
-  width: max-content;
+  max-width: 90%;
+  width: auto;
 }
+
 .traffic-lights {
   /* Styling for the window control buttons */
   position: absolute;
@@ -47,45 +49,46 @@
   display: flex;
   gap: 0.5rem;
 }
+
 .traffic-lights .light {
   /* Common styling for all lights */
   height: 12px;
   width: 12px;
   border-radius: 50%;
 }
+
 .light.red {
   background: #ff605c;
 }
+
 .light.yellow {
   background: #ffbd44;
 }
+
 .light.green {
   background: #00ca4e;
 }
 
-/*typewriter effect*/
-@keyframes typing {
-  /*Typing effect from nothing to full width text.*/
-  from { width: 0; }
-  to { width: 100%; }
+/* Add gradient animation for the name */
+.gradient-name {
+  font-size: 3em; /* Increased size since it's no longer in a container */
+  font-weight: 700;
+  margin: 2rem auto 20px auto; /* Add some margin to replace the window spacing */
+  font-family: 'Montserrat', sans-serif;
+  background: linear-gradient(to right, #7b4397, #dc2430, #7b4397);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 2px 2px 4px rgba(123, 67, 151, 0.3);
+  letter-spacing: 2px;
+  animation: gradient 3s linear infinite;
 }
-@keyframes blink-caret {
-  /*Blinking cursor effect from transparent to colored.*/
-  from, to { border-color: transparent; } 
-  50% { border-color: #0058DD; }
-}
-.typewriter h1 {
-  /* Styling for typewriter effect */
-  font-weight:normal; /*instead of usual bold for h1*/
-  padding-top:2px;
-  font-size: 2.5em;
 
-  overflow: hidden;
-  white-space: nowrap; /*keeps it on one line*/
-  margin: 0 auto; /*centers it*/
-  letter-spacing: .15em; 
-  animation: typing 3s steps(12, end) forwards, blink-caret 1s step-end infinite;
-  border-right: .1em solid #0058DD; /* The typewriter cursor */
+@keyframes gradient {
+  to {
+    background-position: 200% center;
+  }
 }
 
 /* BUTTON CSS RESUME */

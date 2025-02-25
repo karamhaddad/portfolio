@@ -75,6 +75,80 @@
       font-family: 'Space Mono', monospace !important;
     }
   </style>
+
+  <!-- Add after the meta tags in the head section -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Add before the Tailwind CSS script -->
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+    }
+    
+    nav, 
+    .mobile-menu,
+    .desktop-menu,
+    footer,
+    .footer-content,
+    .footer-links,
+    .useless-button {
+      font-family: 'Montserrat', sans-serif;
+    }
+    
+    h1, h2, h3, h4, h5, h6, 
+    .section-title, 
+    .card-title, 
+    .feature-title,
+    .skill,
+    .button,
+    .cta-button {
+      font-family: 'Montserrat', sans-serif;
+    }
+    
+    p, 
+    .card-description, 
+    .feature-description,
+    li,
+    .about-me-tagline {
+      font-family: 'Poppins', sans-serif;
+    }
+  </style>
+
+  <!-- Replace the typewriter section with the gradient animation -->
+  <style>
+    /* Remove typewriter animation */
+    .mac-window {
+      background: #1e1e1e;
+      border-radius: 8px;
+      padding: 2rem;
+      padding-top: 2.5rem;
+      position: relative;
+      margin: 2rem auto 10px auto;
+      width: max-width: 90%;
+    }
+    
+    /* Add gradient animation for the name */
+    .gradient-name {
+      font-size: 2.5em;
+      font-weight: 700;
+      margin-bottom: 20px;
+      font-family: 'Montserrat', sans-serif;
+      background: linear-gradient(to right, #7b4397, #dc2430, #7b4397);
+      background-size: 200% auto;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-shadow: 2px 2px 4px rgba(123, 67, 151, 0.3);
+      letter-spacing: 2px;
+      animation: gradient 3s linear infinite;
+    }
+    
+    @keyframes gradient {
+      to {
+        background-position: 200% center;
+      }
+    }
+  </style>
 </head>
 <body>
   <!-- Progress Bar for Scrolling -->
@@ -122,23 +196,7 @@
     <!-- Home Section -->
     <section id="home" class="about-me">
         <img src="header/karam_haddad_headshot.jpg" alt="Karam Haddad Headshot" class="headshot" loading="lazy">
-        <div class="mac-window">
-            <div class="traffic-lights">
-                <div class="light red"></div>
-                <div class="light yellow"></div>
-                <div class="light green"></div>
-            </div>
-            <div class="typewriter">
-                <!-- Typewriter effect for name -->
-                <h1 id="name">Karam Haddad</h1>
-            </div>
-        </div>
-        <!-- Uncomment if you wish to include the resume button -->
-        <!--
-        <a href="https://docs.google.com/document/d/1ZLVUx_X2Up4vq6tpXCSxZeAjEZB9d59mdhuybr0AU9k/edit?usp=sharing" target="_blank">
-            <button class="button-64" role="button"><span class="text">My Resume</span></button>
-        </a>
-        -->
+        <h1 class="gradient-name">Karam Haddad</h1>
         <p class="about-me-tagline mt-2 text-base text-gray-300 text-center px-10">
             I enjoy problem solving by combining my hardware and software skills.<br>Explore my portfolio!</p>
     </section>
@@ -195,7 +253,7 @@
                 </div>
                 <div class="experience-card">
                     <div class="experience-info">
-                        <h2 class="experience-brand">PLC Engineer (Intern)</h2>
+                        <h2 class="experience-brand">PLC Engineer (Intern)<br><br></h2>
                         <div class="experience-image">
                             <img src="experience/ExxonMobil1.webp" class="experience-thumb" alt="ExxonMobil internship logo" loading="lazy">
                         </div>

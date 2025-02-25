@@ -9,6 +9,7 @@ main#main-content {
 
 /* Styling for the navigation bar DESKTOP============================================================VVVVVV*/
 nav {
+  font-family: 'Montserrat', sans-serif;
   /*make the background black but also slightly backdrop blur */
   background-color: rgba(16, 16, 16, 0.96);
   overflow: hidden;
@@ -79,6 +80,7 @@ nav ul li:hover {
 }
 
 .mobile-menu a {
+  font-family: 'Montserrat', sans-serif;
   padding: 20px;
   color: #d8d5db;
   text-decoration: none;
@@ -106,6 +108,11 @@ nav ul li:hover {
   text-decoration: none;
   color: #d8d5db;
   padding: 10px 15px;
+}
+
+.desktop-menu li {
+  font-family: 'Montserrat', sans-serif;
+  /* Rest of properties remain the same */
 }
 
 .menu-icon {
