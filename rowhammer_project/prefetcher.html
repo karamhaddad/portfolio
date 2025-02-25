@@ -178,29 +178,30 @@
       background-clip: text;
     }
 
-    /* Add gradient button styling */
-    .gradient-button {
+    /* Updated button styling to match projects.html */
+    .action-button {
       display: inline-block;
       padding: 12px 24px;
       margin: 10px;
-      font-family: 'Montserrat', sans-serif;
-      font-weight: 600;
-      font-size: 1rem;
+      background-color: #f3f3f3; /* Light color like in projects.html */
+      color: #333; /* Dark text for contrast */
       text-decoration: none;
       border-radius: 30px;
-      color: #fff;
-      background: linear-gradient(to right, #7b4397, #dc2430);
-      background-size: 200% auto;
-      transition: 0.3s ease;
-      border: none;
-      cursor: pointer;
-      box-shadow: 0 4px 15px rgba(123, 67, 151, 0.3);
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      text-align: center;
     }
     
-    .gradient-button:hover {
-      background-position: right center;
+    .action-button:hover {
       transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(220, 36, 48, 0.4);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+      background-color: #ddd; /* Slightly darker on hover */
+    }
+    
+    .action-button i {
+      margin-right: 8px;
     }
     
     .button-container {
@@ -385,8 +386,12 @@
       </p>
 
       <div class="button-container">
-        <a href="../index.html#contact" class="gradient-button">Contact Me</a>
-        <a href="../index.html" class="gradient-button">Return Home</a>
+        <a href="../index.html" class="action-button">
+          <i class="fas fa-home"></i> Return Home
+        </a>
+        <a href="../index.html#contact" class="action-button">
+          <i class="fas fa-envelope"></i> Contact Me
+        </a>
       </div>
     </div>
   </div>
