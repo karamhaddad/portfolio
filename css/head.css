@@ -6,8 +6,6 @@
 
 /* Styling for the profile section */
 .about-me{
-  margin: 0;
-  padding: 0;
   width: 100%;
   background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgb(16, 16, 16)),
   url(../banner.jpeg);
@@ -30,50 +28,11 @@
   margin-top: 30px;
 }
 
-.mac-window {
-  background: #1e1e1e;
-  border-radius: 8px;
-  padding: 2rem;
-  padding-top: 2.5rem; /*to make room for the traffic light*/
-  position: relative;
-  margin: 2rem auto 10px auto; /*top, right, bottom, left.*/
-  max-width: 90%;
-  width: auto;
-}
-
-.traffic-lights {
-  /* Styling for the window control buttons */
-  position: absolute;
-  top: 1rem;
-  left: 1rem;
-  display: flex;
-  gap: 0.5rem;
-}
-
-.traffic-lights .light {
-  /* Common styling for all lights */
-  height: 12px;
-  width: 12px;
-  border-radius: 50%;
-}
-
-.light.red {
-  background: #ff605c;
-}
-
-.light.yellow {
-  background: #ffbd44;
-}
-
-.light.green {
-  background: #00ca4e;
-}
-
 /* Add gradient animation for the name */
 .gradient-name {
   font-size: 3em; /* Increased size since it's no longer in a container */
   font-weight: 700;
-  margin: 2rem auto 20px auto; /* Add some margin to replace the window spacing */
+  margin: 1rem auto 10px auto; /* this is margin for first top, right, bottom, left.*/
   font-family: 'Montserrat', sans-serif;
   background: linear-gradient(to right, #7b4397, #dc2430, #7b4397);
   background-size: 200% auto;
@@ -91,56 +50,6 @@
   }
 }
 
-/* BUTTON CSS RESUME */
-
-.text{
-  font-size: 1.2em;
-  font-color: #F5F5F7;
-}
-
-.button-64 {
-  margin-bottom: 35px;
-  margin-top:10px;
-
-  align-items: center;
-  background-image: linear-gradient(144deg,#f02ea9, #e92ef0 50%,#af2ef0);
-  border: 0;
-  border-radius: 8px;
-  box-shadow: rgba(152, 65, 252, 1) 0 9px 35px -13px;
-  box-sizing: border-box;
-  display: flex;
-  justify-content: center;
-  line-height: 1em;
-  z-index: 100;
-  padding: 3px; /*outline outside the button*/
-  text-decoration: none;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  white-space: nowrap;
-  cursor: pointer;
-}
-
-.button-64:active,
-.button-64:hover {
-  outline: 0;
-}
-
-.button-64 span {
-  background-color: #1e1e1e;
-  border-radius: 6px;
-  height: 100%;
-  transition: 300ms;
-  padding:10px;
-}
-
-.button-64:hover span {
-  background: none;
-}
-/*make the button-64 itself smaller not the text inside it*/
-
-/*END OF BUTTON CSS*/
-
 /* Small screens (phones)*/
 @media (max-width: 600px) {
   /*all h1 needs to be smaller on phones*/
@@ -151,9 +60,6 @@
   .headshot{
     width: 160px;
     height: 160px;
-  }
-  .button-85{
-    font-size: 0.8em !important;
   }
   .typewriter h1{
     /*make it important*/
