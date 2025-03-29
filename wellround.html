@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WellRound - Smart Wellness Display | Karam Haddad</title>
+  
+  <!-- Add these Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Your standard CSS imports -->
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/nav.css">
+  <link rel="stylesheet" href="../css/head.css">
+  <link rel="stylesheet" href="../seprate-exp.css">
+  <link rel="stylesheet" href="../scroll_progress/scroll_progress.css">
+  <link rel="icon" type="image/x-icon" href="../header/kh_logo.png">
+
+  <style>
+    /* Global font settings for this page */
+    body {
+      font-family: 'Poppins', sans-serif;
+    }
+    
+    nav, 
+    .mobile-menu,
+    .desktop-menu,
+    footer,
+    .footer-content,
+    .footer-links,
+    .useless-button {
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    /* Copy the about-me section from index.html but adapt for WellRound */
+    .about-me {
+      margin: 0;
+      padding: 85px 0 0 0; /* Add top padding to push content below nav bar */
+      width: 100%;
+      height: 60vh;
+      background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(16, 16, 16, 0.3)),
+      url('WellRound.jpg');
+      background-size: cover;
+      background-position: center;
+      color: #d8d5db;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-end;
+      text-align: center;
+    }
+
+    .WellRound-title {
+      margin-top: 50px;
+      font-size: 72px;
+      font-weight: 700;
+      margin-bottom: 20px;
+      font-family: 'Montserrat', sans-serif;
+      background: linear-gradient(to right, #7b4397, #dc2430, #7b4397);
+      background-size: 200% auto;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-shadow: 2px 2px 4px rgba(123, 67, 151, 0.3);
+      letter-spacing: 2px;
+      animation: gradient 3s linear infinite;
+    }
+
+    @keyframes gradient {
+      to {
+        background-position: 200% center;
+      }
+    }
+
+    .about-me-tagline {
+      font-size: 1.5rem;
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 0 20px;
+      margin-bottom: 50px;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 300;
+      color: #F5F5F7;
+    }
+
+    /* Rest of your existing styles for features, etc. */
+    .feature-section {
+      padding: 30px 20px;
+      background: #000;
+      color: #F5F5F7;
+      text-align: center;
+    }
+
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 40px;
+      max-width: 1200px;
+      margin: 20px auto;
+    }
+
+    .feature-card {
+      background: #1c1c1e;
+      border-radius: 20px;
+      padding: 40px;
+      text-align: left;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .feature-icon {
+      font-size: 32px;
+      margin-bottom: 20px;
+      background: linear-gradient(135deg, #7b4397, #dc2430);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .feature-title {
+      font-size: 24px;
+      margin-bottom: 15px;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+    }
+
+    .feature-description {
+      opacity: 0.8;
+      line-height: 1.6;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 300;
+    }
+
+    .engineering-section {
+      background: #1c1c1e;
+      border-top: 1px solid #333;
+      border-bottom: 1px solid #333;
+    }
+
+    .section-title {
+      font-size: 2.5em;
+      margin-bottom: 40px;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      color: #F5F5F7;
+    }
+
+    .cta-section {
+      padding: 50px 20px;
+      text-align: center;
+      background: linear-gradient(135deg, #7b4397, #dc2430);
+      font-family: 'Poppins', sans-serif;
+      margin-bottom: -1px;
+    }
+
+    .cta-buttons {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    .cta-button {
+      display: inline-block;
+      padding: 15px 30px;
+      text-decoration: none;
+      border-radius: 30px;
+      font-weight: 600;
+      font-family: 'Montserrat', sans-serif;
+      transition: transform 0.3s ease;
+    }
+
+    .cta-button.primary {
+      background: #F5F5F7;
+      color: #000;
+    }
+
+    .cta-button.secondary {
+      background: transparent;
+      color: #F5F5F7;
+      border: 2px solid #F5F5F7;
+    }
+
+    .cta-button:hover {
+      transform: scale(1.05);
+    }
+
+    /* Media queries from index.html */
+    @media (max-width: 768px) {
+      .WellRound-title {
+        font-size: 4rem;
+      }
+      
+      .about-me-tagline {
+        font-size: 1.1rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .WellRound-title {
+        font-size: 3.3rem;
+      }
+      
+      .about-me-tagline {
+        font-size: 0.9rem;
+      }
+    }
+
+    footer {
+      margin-top: 0;
+      border-top: none;
+    }
+
+    .footer-content {
+      margin-top: 0;
+    }
+
+    body {
+      overflow-x: hidden;
+      width: 100%;
+      box-sizing: border-box;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Progress Bar -->
+  <div class="progress-container">
+    <div class="progress-bar" id="myBar"></div>
+  </div>
+
+  <!-- Navigation -->
+  <nav id="nav">
+    <div class="hamburger-icon">
+      <a href="index.html#home">
+        <img src="header/kh_logo.png" alt="Karam Haddad Logo" class="nav-logo">
+      </a>
+      <div class="menu-icon" onclick="toggleMenu()">
+        <span class="line line1"></span>
+        <span class="line line2"></span>
+      </div>
+    </div>
+
+    <div class="mobile-menu hidden">
+      <a href="index.html#home">Home</a>
+      <a href="index.html#experience">Experience</a>
+      <a href="index.html#projects">Projects</a>
+      <a href="index.html#contact">Contact</a>
+    </div>
+
+    <ul class="desktop-menu">
+      <a href="index.html#home"><li><img src="header/kh_logo.png" alt="Karam Haddad Logo" class="nav-logo"></li></a>
+      <a href="index.html#home"><li>Home</li></a>
+      <a href="index.html#experience"><li>Experience</li></a>
+      <a href="index.html#projects"><li>Projects</li></a>
+      <a href="index.html#contact"><li>Contact</li></a>
+    </ul>
+  </nav>
+
+  <!-- Hero Section - Using the about-me structure from index.html -->
+  <section class="about-me">
+    <h1 class="WellRound-title">WellRound</h1>
+    <p class="about-me-tagline">Your personal wellness companion that keeps you on track with time, health, and focus.</p>
+  </section>
+
+  <!-- Features Section -->
+  <section class="feature-section">
+    <h2 class="section-title">Smart Features</h2>
+    <div class="feature-grid">
+      <div class="feature-card">
+        <div class="feature-icon">
+          <i class="fas fa-moon"></i>
+        </div>
+        <h3 class="feature-title">Sleep-Friendly Display</h3>
+        <p class="feature-description">
+          Dynamic brightness adjustment and blue light reduction for better sleep. Elegant animated display with customizable 12/24-hour format.
+        </p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">
+          <i class="fas fa-heart"></i>
+        </div>
+        <h3 class="feature-title">Health Reminders</h3>
+        <p class="feature-description">
+          Stay healthy with smart reminders for hydration, movement, and eye rest. Customizable intervals keep you on track throughout your day.
+        </p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">
+          <i class="fas fa-hourglass-half"></i>
+        </div>
+        <h3 class="feature-title">Focus Timer</h3>
+        <p class="feature-description">
+          Boost productivity with an intuitive focus timer. Simple controls help you maintain concentration and track your work sessions.
+        </p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">
+          <i class="fas fa-smile"></i>
+        </div>
+        <h3 class="feature-title">Friendly Interface</h3>
+        <p class="feature-description">
+          Engaging display with multiple views, including a cheerful smiley clock face that makes checking time a delightful experience.
+        </p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">
+          <i class="fas fa-wifi"></i>
+        </div>
+        <h3 class="feature-title">Smart Configuration</h3>
+        <p class="feature-description">
+          Easy setup through web interface with always-accurate time synchronization. Customize all your settings with just a few taps.
+        </p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">
+          <i class="fas fa-mobile-alt"></i>
+        </div>
+        <h3 class="feature-title">Compact Design</h3>
+        <p class="feature-description">
+          Sleek LCD display housed in a compact form factor. Perfect for your desk or nightstand.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Engineering Excellence Section -->
+  <section class="feature-section engineering-section">
+    <h2 class="section-title">Engineering Excellence</h2>
+    <div class="feature-grid">
+      <div class="feature-card">
+        <div class="feature-icon">
+          <i class="fas fa-cube"></i>
+        </div>
+        <h3 class="feature-title">Custom 3D Design</h3>
+        <p class="feature-description">
+          Meticulously designed and 3D printed enclosure optimized for aesthetics, durability, and efficient assembly.
+        </p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">
+          <i class="fas fa-microchip"></i>
+        </div>
+        <h3 class="feature-title">PCB Design</h3>
+        <p class="feature-description">
+          Custom-designed printed circuit board for optimal component layout and reliable performance.
+        </p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">
+          <i class="fas fa-code"></i>
+        </div>
+        <h3 class="feature-title">Embedded Systems</h3>
+        <p class="feature-description">
+          Advanced firmware development with seamless WiFi connectivity and efficient power management.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="cta-section">
+    <h2>Ready to enhance your daily routine?</h2>
+    <div class="cta-buttons">
+      <a href="#home" class="cta-button secondary" target="_blank">Buy</a> <!-- TODO: Add link to shop -->
+      <a href="index.html#contact" class="cta-button primary">Get in Touch</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <a href="index.html#home">
+        <img src="header/kh_logo.png" alt="Karam Haddad Logo" class="footer-logo" loading="lazy">
+      </a>
+      <div class="footer-links">
+        <a href="index.html#home">Home</a>
+        <a href="index.html#projects">Projects</a>
+        <a href="index.html#experience">Experience</a>
+        <a href="index.html#contact">Contact</a>
+      </div>
+      <p>&copy; 2025 Karam Haddad</p>
+      <p>This website was entirely built from scratch using JavaScript, HTML, and CSS by Karam Haddad</p>
+      <button id="useless-button" class="useless-button">Useless Button</button>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script src="scroll_progress/scroll_progress.js"></script>
+</body>
+</html>
