@@ -53,10 +53,10 @@
     }
 
     .WellRound-title {
+      font-size: clamp(4rem, 8vw, 8rem) !important;
       margin-top: 50px;
-      font-size: 72px;
       font-weight: 700;
-      margin-bottom: 20px;
+      margin-bottom: 5px;
       font-family: 'Montserrat', sans-serif;
       background: linear-gradient(to right, #7b4397, #dc2430, #7b4397);
       background-size: 200% auto;
@@ -79,7 +79,6 @@
       max-width: 600px;
       margin: 0 auto;
       padding: 0 20px;
-      margin-bottom: 50px;
       font-family: 'Poppins', sans-serif;
       font-weight: 300;
       color: #F5F5F7;
@@ -181,15 +180,20 @@
       border: 2px solid #F5F5F7;
     }
 
+    .cta-button.secondary.header {
+      background: transparent;
+      color: #F5F5F7;
+      border: 2px solid #F5F5F7;
+      margin-bottom:50px;
+    }
+
     .cta-button:hover {
       transform: scale(1.05);
     }
 
     /* Media queries from index.html */
     @media (max-width: 768px) {
-      .WellRound-title {
-        font-size: 4rem;
-      }
+      
       
       .about-me-tagline {
         font-size: 1.1rem;
@@ -197,9 +201,7 @@
     }
 
     @media (max-width: 480px) {
-      .WellRound-title {
-        font-size: 3.3rem;
-      }
+      
       
       .about-me-tagline {
         font-size: 0.9rem;
@@ -261,6 +263,10 @@
   <section class="about-me">
     <h1 class="WellRound-title">WellRound</h1>
     <p class="about-me-tagline">Your personal wellness companion that keeps you on track with time, health, and focus.</p>
+
+    <div class="cta-buttons">
+      <a href="usermanual.html" class="cta-button secondary header">User Manual</a> <!-- TODO: Add link to shop -->
+    </div>
   </section>
 
   <!-- Features Section -->

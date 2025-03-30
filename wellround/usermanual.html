@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>WellRound User Manual | Karam Haddad</title>
+  
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/nav.css">
+  <link rel="stylesheet" href="../css/head.css">
+  <link rel="stylesheet" href="../seprate-exp.css">
+  <link rel="stylesheet" href="../scroll_progress/scroll_progress.css">
+  <link rel="icon" type="image/x-icon" href="../header/kh_logo.png">
+
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      overflow-x: hidden;
+    }
+    nav, .mobile-menu, .desktop-menu, footer, .footer-content, .footer-links {
+      font-family: 'Montserrat', sans-serif;
+    }
+    .about-me {
+      margin: 0;
+      padding: 85px 0 0 0;
+      width: 100%;
+      height: 60vh;
+      padding-bottom: 50px;
+      background-image: linear-gradient(rgba(0,0,0,0.3), rgba(16,16,16,0.3)), url('wellround.webp');
+      background-size: cover;
+      background-position: center;
+      color: #d8d5db;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-end;
+      text-align: center;
+    }
+    .WellRound-title {
+      font-size: clamp(3rem, 8vw, 5rem);
+      font-weight: 700;
+      margin-bottom: -20px;
+      font-family: 'Montserrat', sans-serif;
+      background: linear-gradient(to right, #7b4397, #dc2430, #7b4397);
+      background-size: 200% auto;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: gradient 3s linear infinite;
+      text-shadow: 2px 2px 4px rgba(123,67,151,0.3);
+      letter-spacing: 2px;
+    }
+    .WellRound-title-secondary{
+      font-size: clamp(1rem, 8vw, 3rem);
+      font-weight: 700;
+      margin-bottom: 5px;
+      font-family: 'Montserrat', sans-serif;
+      background: linear-gradient(to right, #7b4397, #dc2430, #7b4397);
+      background-size: 200% auto;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: gradient 3s linear infinite;
+      text-shadow: 2px 2px 4px rgba(123,67,151,0.3);
+      letter-spacing: 2px;
+    }
+    @keyframes gradient {
+      to { background-position: 200% center; }
+    }
+    .cta-section {
+      padding: 50px 20px;
+      text-align: center;
+      background: linear-gradient(135deg, #7b4397, #dc2430);
+      font-family: 'Poppins', sans-serif;
+      margin-bottom: -1px;
+    }
+
+    .cta-buttons {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    .cta-button {
+      display: inline-block;
+      padding: 15px 30px;
+      text-decoration: none;
+      border-radius: 30px;
+      font-weight: 600;
+      font-family: 'Montserrat', sans-serif;
+      transition: transform 0.3s ease;
+    }
+    .cta-button.primary {
+      background: #F5F5F7;
+      color: #000;
+    }
+
+    .cta-button.secondary {
+      background: transparent;
+      color: #F5F5F7;
+      border: 2px solid #F5F5F7;
+    }
+
+    .cta-button.secondary.header {
+      background: transparent;
+      color: #F5F5F7;
+      border: 2px solid #F5F5F7;
+    }
+
+    .cta-button:hover {
+      transform: scale(1.05);
+    }
+
+    .about-me-tagline {
+      font-size: 1.3rem;
+      max-width: 600px;
+      padding: 0 20px;
+      font-weight: 300;
+      color: #F5F5F7;
+    }
+    .manual-section {
+      background: #000;
+      color: #F5F5F7;
+      padding: 60px 20px;
+    }
+    .manual-group {
+      max-width: 800px;
+      margin: 0 auto 40px;
+    }
+    .manual-group h2 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 26px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    details {
+      background: #1c1c1e;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      padding: 10px 20px;
+      overflow: hidden;
+    }
+    /* Override default toggle by not using built-in toggle */
+    details > *:not(summary) {
+      pointer-events: none;
+    }
+    /* Style summary as a flex container with space-between */
+    summary {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 20px;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      user-select: none;
+    }
+    summary::-webkit-details-marker {
+      display: none;
+    }
+    .summary-content {
+      display: flex;
+      align-items: center;
+    }
+    .summary-content i {
+      margin-right: 10px;
+      font-size: 22px;
+      width: 30px;
+      text-align: center;
+    }
+    /* The toggle arrow */
+    .toggle-arrow {
+      transition: transform 0.35s ease;
+    }
+    details[open] summary .toggle-arrow {
+      transform: rotate(180deg);
+    }
+    /* Animated content container */
+    .details-content {
+      height: 0;
+      opacity: 0;
+      overflow: hidden;
+      transition: height 0.35s ease, opacity 0.35s ease;
+    }
+    .details-content p {
+      font-family: 'Poppins', sans-serif;
+      font-size: 15px;
+      font-weight: 300;
+      line-height: 1.6;
+      margin: 10px 0 0 40px;
+    }
+    @media (max-width: 480px) {
+      .about-me-tagline {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Progress Bar -->
+  <div class="progress-container">
+    <div class="progress-bar" id="myBar"></div>
+  </div>
+
+  <!-- Navigation -->
+  <nav id="nav">
+    <div class="hamburger-icon">
+      <a href="../index.html#home">
+        <img src="../header/kh_logo.png" alt="Karam Haddad Logo" class="nav-logo">
+      </a>
+      <div class="menu-icon" onclick="toggleMenu()">
+        <span class="line line1"></span>
+        <span class="line line2"></span>
+      </div>
+    </div>
+    <div class="mobile-menu hidden">
+      <a href="../index.html#home">Home</a>
+      <a href="../index.html#experience">Experience</a>
+      <a href="../index.html#projects">Projects</a>
+      <a href="../index.html#contact">Contact</a>
+    </div>
+    <ul class="desktop-menu">
+      <a href="../index.html#home"><li><img src="../header/kh_logo.png" alt="Logo" class="nav-logo"></li></a>
+      <a href="../index.html#home"><li>Home</li></a>
+      <a href="../index.html#experience"><li>Experience</li></a>
+      <a href="../index.html#projects"><li>Projects</li></a>
+      <a href="../index.html#contact"><li>Contact</li></a>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="about-me">
+    <h1 class="WellRound-title">WellRound</h1>
+    <h2 class="WellRound-title-secondary">User Manual</h2>
+    <p class="about-me-tagline">Everything you need to know to get started with WellRound</p>
+    <div class="cta-buttons">
+      <a href="wellround.html" class="cta-button secondary header">&lt; Product Page</a>
+    </div>
+  </section>
+
+  <!-- Manual Dropdowns -->
+  <section class="manual-section">
+    <!-- Setup & Troubleshooting Group -->
+    <div class="manual-group">
+      <h2>Setup &amp; Troubleshooting</h2>
+      <details>
+        <summary>
+          <div class="summary-content">
+            <i class="fas fa-power-off"></i>
+            <span>Powering On</span>
+          </div>
+          <i class="fas fa-chevron-down toggle-arrow"></i>
+        </summary>
+        <div class="details-content">
+          <p>Simply plug in the USB-C cable. WellRound will power on automatically.</p>
+        </div>
+      </details>
+      <details>
+        <summary>
+          <div class="summary-content">
+            <i class="fas fa-wifi"></i>
+            <span>Entering Setup Mode</span>
+          </div>
+          <i class="fas fa-chevron-down toggle-arrow"></i>
+        </summary>
+        <div class="details-content">
+          <p>
+            When first turning on, go to your phone’s Wi-Fi settings and connect to the network shown on WellRound’s screen. Before connecting, ensure you have your home Wi-Fi password. Once connected, a pairing portal appears. Fill out the form and enter your location as <strong>City, Country Code</strong> (e.g., Dallas, US). If the network isn’t visible, refresh your Wi-Fi list.
+          </p>
+        </div>
+      </details>
+      <details>
+        <summary>
+          <div class="summary-content">
+            <i class="fas fa-sync-alt"></i>
+            <span>Finishing Setup</span>
+          </div>
+          <i class="fas fa-chevron-down toggle-arrow"></i>
+        </summary>
+        <div class="details-content">
+          <p>
+            After submitting your info, WellRound should restart automatically. If it does not, your credentials may be incorrect. Repeat the setup process.
+          </p>
+        </div>
+      </details>
+      <details>
+        <summary>
+          <div class="summary-content">
+            <i class="fas fa-clock"></i>
+            <span>Fixing “Failed to Get Time”</span>
+          </div>
+          <i class="fas fa-chevron-down toggle-arrow"></i>
+        </summary>
+        <div class="details-content">
+          <p>
+            If you encounter this error after setup, unplug and plug the device back in. This typically resolves the issue.
+          </p>
+        </div>
+      </details>
+      <details>
+        <summary>
+          <div class="summary-content">
+            <i class="fas fa-redo"></i>
+            <span>Re-Entering Setup Mode</span>
+          </div>
+          <i class="fas fa-chevron-down toggle-arrow"></i>
+        </summary>
+        <div class="details-content">
+          <p>
+            To reconfigure settings (Wi-Fi, location, etc.), power off the device. When the “KH” logo appears during reboot, press and hold the <strong>left button</strong> for 2–3 seconds. Release to re-enter setup mode.
+          </p>
+        </div>
+      </details>
+    </div>
+
+    <!-- Device Usage Group -->
+    <div class="manual-group">
+      <h2>Device Usage</h2>
+      <details>
+        <summary>
+          <div class="summary-content">
+            <i class="fas fa-clock"></i>
+            <span>Clock Mode</span>
+          </div>
+          <i class="fas fa-chevron-down toggle-arrow"></i>
+        </summary>
+        <div class="details-content">
+          <p>
+            This is the default screen. The number above the right arrow shows the current day. Press the <strong>middle button</strong> to toggle between 12/24-hour formats.
+          </p>
+        </div>
+      </details>
+      <details>
+        <summary>
+          <div class="summary-content">
+            <i class="fas fa-cloud"></i>
+            <span>Weather View</span>
+          </div>
+          <i class="fas fa-chevron-down toggle-arrow"></i>
+        </summary>
+        <div class="details-content">
+          <p>
+            From the clock screen, press the <strong>left button</strong> to view the weather. The display auto-refreshes based on your setup location.
+          </p>
+        </div>
+      </details>
+      <details>
+        <summary>
+          <div class="summary-content">
+            <i class="fas fa-hourglass-half"></i>
+            <span>Focus Timer</span>
+          </div>
+          <i class="fas fa-chevron-down toggle-arrow"></i>
+        </summary>
+        <div class="details-content">
+          <p>
+            Access the timer by pressing the <strong>right button</strong>. Increase time with the <strong>middle button</strong>, start/pause/clear with the <strong>left button</strong>, and press <strong>right</strong> again to return. To reset, pause using the left button, then press it once more.
+          </p>
+        </div>
+      </details>
+      <details>
+        <summary>
+          <div class="summary-content">
+            <i class="fas fa-heartbeat"></i>
+            <span>Health Reminders</span>
+          </div>
+          <i class="fas fa-chevron-down toggle-arrow"></i>
+        </summary>
+        <div class="details-content">
+          <p>
+            On the clock screen, reminders (e.g., hydration, movement) blink based on your setup preferences. They pause at midnight and resume in the early morning.
+          </p>
+        </div>
+      </details>
+      <details>
+        <summary>
+          <div class="summary-content">
+            <i class="fas fa-adjust"></i>
+            <span>Display Behavior</span>
+          </div>
+          <i class="fas fa-chevron-down toggle-arrow"></i>
+        </summary>
+        <div class="details-content">
+          <p>
+            At night, the screen dims for better sleep. Around sunset, it shifts to a red hue to reduce blue light and protect your eyes.
+          </p>
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <a href="../index.html#home">
+        <img src="../header/kh_logo.png" alt="Karam Haddad Logo" class="footer-logo" loading="lazy">
+      </a>
+      <div class="footer-links">
+        <a href="../index.html#home">Home</a>
+        <a href="../index.html#projects">Projects</a>
+        <a href="../index.html#experience">Experience</a>
+        <a href="../index.html#contact">Contact</a>
+      </div>
+      <p>&copy; 2025 Karam Haddad</p>
+      <p>This website was entirely built from scratch using JavaScript, HTML, and CSS by Karam Haddad</p>
+      <button id="useless-button" class="useless-button">Useless Button</button>
+    </div>
+  </footer>
+
+  <!-- Custom JavaScript for animating details dropdown -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const detailsElements = document.querySelectorAll('details');
+      
+      detailsElements.forEach(details => {
+        const summary = details.querySelector('summary');
+        const content = details.querySelector('.details-content');
+        
+        // Initialize content styles.
+        content.style.height = '0px';
+        content.style.opacity = '0';
+        
+        summary.addEventListener('click', function(e) {
+          e.preventDefault(); // Prevent the default details toggle.
+          
+          if (!details.hasAttribute('open')) {
+            // Opening the card.
+            details.setAttribute('open', '');
+            content.style.height = content.scrollHeight + 'px';
+            content.style.opacity = '1';
+            
+            content.addEventListener('transitionend', function handler(event) {
+              if (event.propertyName === 'height') {
+                // Remove fixed height so that if content changes, height remains auto.
+                content.style.height = 'auto';
+                content.removeEventListener('transitionend', handler);
+              }
+            });
+          } else {
+            // Closing the card.
+            // If height is auto, fix it to its current pixel value.
+            if (content.style.height === 'auto') {
+              content.style.height = content.scrollHeight + 'px';
+              void content.offsetHeight; // force reflow
+            }
+            content.style.height = '0px';
+            content.style.opacity = '0';
+            
+            content.addEventListener('transitionend', function handler(event) {
+              if (event.propertyName === 'height') {
+                details.removeAttribute('open');
+                content.removeEventListener('transitionend', handler);
+              }
+            });
+          }
+        });
+      });
+    });
+  </script>
+
+  <script src="../script.js"></script>
+  <script src="../scroll_progress/scroll_progress.js"></script>
+</body>
+</html>
